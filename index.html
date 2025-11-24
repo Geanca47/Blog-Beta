@@ -17,17 +17,20 @@
     .fuentes {
       font-style: italic;
       margin-top: 2rem;
-     font-size: 18px;
+      font-size: 18px;
     }
     .footer {
       margin-top: 2rem;
       font-weight: bold;
-      color: green;
-      font-size: 18px;
+      color: #444;
+      font-size: 16px;
+      padding: 18px 0;
+      background-color: #f3f3f3;
     }
     .card-img-top {
       width: 100%;
       height: auto;
+      object-fit: cover;
     }
     .btn-primary {
       background-color: #c00;
@@ -37,6 +40,14 @@
       margin-top: 2rem;
       font-size: 18px;
     }
+    .section-title {
+      color: #c00;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .source-figure img { max-width: 320px; height:auto; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.12); }
   </style>
 </head>
 <body>
@@ -50,25 +61,13 @@
 
 <div class="container mt-5">
 
-  <!-- Cards de los misterios -->
+  <!-- Cards de los misterios (reordenados: Iniquidad -> Piedad -> Mente) -->
   <div class="row row-cols-1 row-cols-md-3 g-4">
-
-    <!-- Misterio de la Piedad -->
-    <div class="col">
-      <div class="card h-100">
-        <img src="assets/pics/the truth.png" class="card-img-top" alt="Misterio de la Piedad">
-        <div class="card-body text-center">
-          <h5 class="card-title">Misterio de la Piedad</h5>
-          <p class="card-text">Thomasin, la pureza de su corazón y la gracia divina no escuchada inicialmente.</p>
-          <a href="#explicacion-piedad" class="btn btn-primary">Ver explicación profunda</a>
-        </div>
-      </div>
-    </div>
 
     <!-- Misterio de la Iniquidad -->
     <div class="col">
       <div class="card h-100">
-        <img src="assets/pics/Eva.png" class="card-img-top" alt="Misterio de la Iniquidad">
+        <img src="assets/pics/Eva.png" class="card-img-top" alt="Misterio de la Iniquidad" style="height:300px; object-fit:cover;">
         <div class="card-body text-center">
           <h5 class="card-title">Misterio de la Iniquidad</h5>
           <p class="card-text">Eva y la primera manifestación del engaño: distorsión de la verdad y el pecado original.</p>
@@ -77,10 +76,22 @@
       </div>
     </div>
 
+    <!-- Misterio de la Piedad -->
+    <div class="col">
+      <div class="card h-100">
+        <img src="assets/pics/the truth.png" class="card-img-top" alt="Misterio de la Piedad" style="height:300px; object-fit:cover;">
+        <div class="card-body text-center">
+          <h5 class="card-title">Misterio de la Piedad</h5>
+          <p class="card-text">Thomasin, la pureza de su corazón y la gracia divina no escuchada inicialmente.</p>
+          <a href="#explicacion-piedad" class="btn btn-primary">Ver explicación profunda</a>
+        </div>
+      </div>
+    </div>
+
     <!-- Misterio de la Mente Humana -->
     <div class="col">
       <div class="card h-100">
-        <img src="assets/pics/ofelia.png" class="card-img-top" alt="Misterio de la Mente Humana">
+        <img src="assets/pics/ofelia.png" class="card-img-top" alt="Misterio de la Mente Humana" style="height:300px; object-fit:cover;">
         <div class="card-body text-center">
           <h5 class="card-title">Misterio de la Mente Humana</h5>
           <p class="card-text">Ofelia y la confrontación entre lo divino y lo malvado, reflejo del conflicto interno humano.</p>
@@ -94,7 +105,20 @@
   <!-- Explicaciones profundas -->
   <div class="explicacion">
 
-    <div id="explicacion-piedad">
+    <div id="explicacion-iniquidad">
+      <h3 class="text-danger">Explicación profunda del Misterio de la Iniquidad</h3>
+      <p>
+        Eva representa el primer encuentro con el misterio de la iniquidad (2 Tesalonicenses 2:7). La serpiente distorsiona la verdad y manipula emociones,
+        mostrando cómo el mal puede disfrazarse de bien. La codicia, envidia y engaño producen una sensación de "poder",
+        engañando a la mente humana sobre lo que es realmente la vida y la muerte.
+      </p>
+      <p>
+        Paralelismo: Eva y su experiencia revelan el patrón que se repite en toda la humanidad: la seducción del pecado se siente atractiva, pero conduce a la separación de Dios.
+      </p>
+      <p><strong>Fuente:</strong> Reina Valera 1960, T.A.R.S. (GPT-5), Claude (Sonnet 4.5), Elena G. de White, Esteban Bohr</p>
+    </div>
+
+    <div id="explicacion-piedad" class="mt-5">
       <h3 class="text-danger">Explicación profunda del Misterio de la Piedad</h3>
       <p>
         El "misterio de la piedad" (1 Timoteo 3:16) nos muestra cómo la encarnación de Dios en Cristo redime a la humanidad. 
@@ -107,19 +131,6 @@
         Este concepto se enlaza con la gracia y la redención que solo Dios puede otorgar.
       </p>
       <p><strong>Fuente:</strong> Reina Valera 1960, T.A.R.S. (GPT-5), Claude (Haiku 2.5), Elena G. de White, Esteban Bohr</p>
-    </div>
-
-    <div id="explicacion-iniquidad" class="mt-5">
-      <h3 class="text-danger">Explicación profunda del Misterio de la Iniquidad</h3>
-      <p>
-        Eva representa el primer encuentro con el misterio de la iniquidad (2 Tesalonicenses 2:7). La serpiente distorsiona la verdad y manipula emociones, 
-        mostrando cómo el mal puede disfrazarse de bien. La codicia, envidia y engaño producen una sensación de "poder", 
-        engañando a la mente humana sobre lo que es realmente la vida y la muerte.
-      </p>
-      <p>
-        Paralelismo: Eva y su experiencia revelan el patrón que se repite en toda la humanidad: la seducción del pecado se siente atractiva, pero conduce a la separación de Dios.
-      </p>
-      <p><strong>Fuente:</strong> Reina Valera 1960, T.A.R.S. (GPT-5), Claude (Sonnet 4.5), Elena G. de White, Esteban Bohr</p>
     </div>
 
     <div id="explicacion-mente" class="mt-5">
@@ -137,7 +148,32 @@
 
   </div>
 
-  <!-- Fuentes -->
+  <!-- Secciones visuales de Fuentes Cristianas y Tecnológicas -->
+  <div class="section-title">Fuentes Cristianas</div>
+  <div class="d-flex justify-content-center mb-4">
+    <figure class="source-figure text-center me-4">
+      <img src="assets/pics/El Rey Jesucristo .png" alt="Jesucristo Rey en su segunda venida">
+      <figcaption style="font-style:italic; color:#666; margin-top:8px;">El Rey Jesucristo en su Segunda Venida</figcaption>
+    </figure>
+    <div style="max-width:720px; text-align:left;">
+      <p class="fuentes"><strong>Fuentes Cristianas:</strong><br>
+      Biblia Reina Valera 1960, Elena G. de White, Patriarcas y Profetas, Conflicto de los Siglos, Comentarios bíblicos y estudios teológicos relevantes.</p>
+    </div>
+  </div>
+
+  <div class="section-title">Fuentes Tecnológicas</div>
+  <div class="d-flex justify-content-center mb-4">
+    <figure class="source-figure text-center me-4">
+      <img src="assets/pics/IA.png" alt="Representación de IA y tecnología">
+      <figcaption style="font-style:italic; color:#666; margin-top:8px;">Inteligencia Artificial y colaboración tecnológica</figcaption>
+    </figure>
+    <div style="max-width:720px; text-align:left;">
+      <p class="fuentes"><strong>Fuentes Tecnológicas:</strong><br>
+      OpenAI: T.A.R.S. (ChatGPT-5), Anthropic: Claude, Microsoft: Copilot, Google: Gemini, MDN, W3C, GitHub, documentación técnica y artículos relevantes.</p>
+    </div>
+  </div>
+
+  <!-- Fuentes detalladas -->
   <div class="fuentes mt-5">
     <h2> Fuentes: </h2> <br>
     Elohim<br>
@@ -164,7 +200,7 @@
 
   <!-- Footer -->
   <div class="footer text-center">
-    Este Blog es creado y mantenido por: <strong>T.A.R.S: (ChatGPT-5)</strong> y <strong>G.B.H. (Geancarlo Beggerstaff Hay)</strong>
+    Este Blog es creado y mantenido por: <strong>T.A.R.S: (ChatGPT-5)</strong> y <strong>G.B.H. (Geanca)</strong>
   </div>
 
 </div>
