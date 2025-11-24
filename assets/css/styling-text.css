@@ -1,0 +1,141 @@
+h2 
+{
+background-color: yellow;
+}
+
+
+/* Styling Text con Classes */
+
+/* 1. Text Color:|  */
+.color-normal 
+{
+color: pink;
+}
+
+.color-hex 
+{
+color: #ff0000;
+}
+
+.color-rgb 
+{
+color: rgb(0,255,0)
+}
+
+.color-opacity 
+{
+color: rgba(0,0,255,0.5)
+}
+
+/* 2. Fuentes: */
+
+.fuente-georgia 
+{
+font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.fuente-arial 
+{
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 3. Tamano de la Fuente: */
+
+/* 3.1. px – píxeles
+Valor fijo, absoluto.
+Ejemplo: font-size: 16px; → siempre mide 16 píxeles en la pantalla.
+Pro: predecible, exacto.
+Contra: no escala si el usuario cambia el tamaño de fuente en el navegador. */
+.tamano-pixel { font-size: 16px; }
+
+/* 3.2. em – relativo al elemento padre
+Valor relativo al tamaño de fuente
+del elemento contenedor (padre)
+Pro: escalable, útil para diseño flexible.
+Contra: si hay muchos elementos anidados, puede crecer más de lo esperado
+(efecto “cascada”).
+*/
+.tamano-em-body
+{ font-size: 16px; }
+
+.tamano-em-p
+{font-size: 1.5em;} /* 1.5 × 16px = 24px */
+
+/* 3.3. rem – relativo al root (html)
+Valor relativo al tamaño de fuente del 
+elemento raíz (<html>), 
+normalmente 16px por defecto. 
+Pro: más predecible que em, porque siempre se basa en el root, no en el padre.
+Muy usado en diseño responsive.
+*/
+.tamano-rem-html
+{ font-size: 16px; }
+.tamano-rem-p
+{ font-size: 2rem; } /* 2 × 16px = 32px */
+
+/* 3.4. % – porcentaje
+Valor relativo al tamaño de fuente del elemento padre, como em pero expresado en %.  
+Pro: flexible, fácil de usar con cambios globales.
+Contra: lo mismo que em, puede acumularse si hay muchos niveles anidados.
+*/
+.porcentaje-body
+{ font-size: 40px; }
+.porcentaje-p
+p { font-size: 150%; } /* 150% × 16px = 24px */
+
+/* 4. Peso de la Fuente:
+font-weight: normal | bold | 100-900; → define qué tan gruesa es la letra.
+*/
+.weight-bold { font-weight: bold; }
+
+/* 5. Espaciado: 
+letter-spacing: valor; → espacio entre letras.
+word-spacing: valor; → espacio entre palabras.
+line-height: valor; → altura de línea (separación vertical).
+*/
+.spacing
+{ letter-spacing: 2px; line-height: 1.5; word-spacing: 4px; }
+
+/* 6. Alineacion: 
+text-align: left | right | center | justify; → alineación del texto.*/
+.align-center
+{ text-align: center; }
+
+/* 7. Decoración:
+text-decoration: none | underline | overline | line-through; → subrayado, línea, etc.  */
+.deco-over
+{ text-decoration: overline; }
+
+/* 8. Transformacion de Texto:
+text-transform: uppercase | lowercase | capitalize; → mayúsculas/minúsculas.
+*/
+.transform
+{ text-transform: uppercase; }
+
+/* 9. Otras Propiedades Utiles: 
+text-indent: valor; → sangría de la primera línea */
+.text-indent
+{ text-indent: 30px; }
+
+/* white-space: nowrap | pre | normal; → controla cómo se rompe el texto */
+
+/* nowrap → todo en una línea. */
+.white-space-nowrap
+{ white-space: nowrap; }
+
+/* pre → respeta espacios y saltos. */
+.white-space-pre
+{ white-space: pre; }
+
+/* normal → comportamiento estándar, ajusta según ancho del contenedor. */
+.white-space-normal
+{ white-space: normal; }
+
+/* word-wrap: break-word; → quiebra palabras largas si es necesario */
+.word-wrap-break-word
+{ width: 150px; border: 1px solid black; word-wrap: break-word; }
+
+/* EOF */
+
+
+

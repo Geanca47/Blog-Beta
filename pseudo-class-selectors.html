@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo-class Selectors</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .example {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .example h2 {
+      color: #667eea;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+
+    .example-code {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border-left: 4px solid #667eea;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      overflow-x: auto;
+    }
+
+    .example-demo {
+      padding: 20px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      border: 1px dashed #ddd;
+    }
+
+    /* :hover */
+    .btn-hover {
+      background-color: #667eea;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: all 0.3s ease;
+    }
+
+    .btn-hover:hover {
+      background-color: #764ba2;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* :active */
+    .btn-active {
+      background-color: #667eea;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: all 0.1s ease;
+    }
+
+    .btn-active:active {
+      transform: scale(0.95);
+      background-color: #5568d3;
+    }
+
+    /* :focus */
+    .input-focus {
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+      transition: all 0.3s ease;
+      width: 100%;
+    }
+
+    .input-focus:focus {
+      outline: none;
+      border-color: #667eea;
+      background-color: #f0f4ff;
+      box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+    }
+
+    /* :visited */
+    a.link-visited {
+      color: #667eea;
+      text-decoration: none;
+      margin: 10px 0;
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+
+    a.link-visited:visited {
+      color: #764ba2;
+    }
+
+    a.link-visited:hover {
+      text-decoration: underline;
+    }
+
+    /* :first-child y :last-child */
+    .list-items {
+      list-style: none;
+    }
+
+    .list-items li {
+      padding: 12px;
+      background: #f9f9f9;
+      margin: 8px 0;
+      border-radius: 5px;
+      border-left: 4px solid #ddd;
+    }
+
+    .list-items li:first-child {
+      background: #e3f2fd;
+      border-left-color: #667eea;
+      font-weight: bold;
+    }
+
+    .list-items li:last-child {
+      background: #f3e5f5;
+      border-left-color: #764ba2;
+      font-weight: bold;
+    }
+
+    /* :nth-child */
+    .table-items {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .table-items tr {
+      border-bottom: 1px solid #ddd;
+    }
+
+    .table-items td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    .table-items tr:nth-child(even) {
+      background-color: #f5f5f5;
+    }
+
+    .table-items tr:nth-child(odd) {
+      background-color: white;
+    }
+
+    /* :not() */
+    .note {
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 5px;
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+    }
+
+    .note:not(.important) {
+      opacity: 0.7;
+    }
+
+    .note.important {
+      background: #f8d7da;
+      border-left-color: #dc3545;
+      font-weight: bold;
+      opacity: 1;
+    }
+
+    /* :disabled y :enabled */
+    .form-group {
+      margin: 15px 0;
+    }
+
+    .form-group input {
+      padding: 10px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 1em;
+      width: 100%;
+    }
+
+    .form-group input:enabled {
+      background-color: white;
+      cursor: text;
+    }
+
+    .form-group input:disabled {
+      background-color: #f5f5f5;
+      cursor: not-allowed;
+      color: #999;
+    }
+
+    /* :checked */
+    .checkbox-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .checkbox-item input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      accent-color: #667eea;
+    }
+
+    .checkbox-item label {
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    .checkbox-item input[type="checkbox"]:checked + label {
+      color: #667eea;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pseudo-class Selectors en CSS</h1>
+
+    <!-- :hover -->
+    <div class="example">
+      <h2>:hover - Pasar el mouse sobre un elemento</h2>
+      <div class="example-code">
+        .btn-hover:hover { background-color: #764ba2; }
+      </div>
+      <div class="example-demo">
+        <button class="btn-hover">Pasa el mouse aquí</button>
+      </div>
+    </div>
+
+    <!-- :active -->
+    <div class="example">
+      <h2>:active - Presionar un elemento</h2>
+      <div class="example-code">
+        .btn-active:active { transform: scale(0.95); }
+      </div>
+      <div class="example-demo">
+        <button class="btn-active">Presiona aquí</button>
+      </div>
+    </div>
+
+    <!-- :focus -->
+    <div class="example">
+      <h2>:focus - Enfoque en un elemento</h2>
+      <div class="example-code">
+        .input-focus:focus { border-color: #667eea; }
+      </div>
+      <div class="example-demo">
+        <input type="text" class="input-focus" placeholder="Haz click aquí para enfocar">
+      </div>
+    </div>
+
+    <!-- :visited -->
+    <div class="example">
+      <h2>:visited - Enlaces visitados</h2>
+      <div class="example-code">
+        a:visited { color: #764ba2; }
+      </div>
+      <div class="example-demo">
+        <a href="https://www.google.com" class="link-visited">Google (azul si no lo visitaste)</a><br>
+        <a href="https://www.github.com" class="link-visited">GitHub (azul si no lo visitaste)</a>
+      </div>
+    </div>
+
+    <!-- :first-child y :last-child -->
+    <div class="example">
+      <h2>:first-child y :last-child</h2>
+      <div class="example-code">
+        li:first-child { background: #e3f2fd; }<br>
+        li:last-child { background: #f3e5f5; }
+      </div>
+      <div class="example-demo">
+        <ul class="list-items">
+          <li>Primer elemento (destacado)</li>
+          <li>Elemento normal</li>
+          <li>Elemento normal</li>
+          <li>Último elemento (destacado)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- :nth-child -->
+    <div class="example">
+      <h2>:nth-child(n) - Filas alternas</h2>
+      <div class="example-code">
+        tr:nth-child(even) { background-color: #f5f5f5; }
+      </div>
+      <div class="example-demo">
+        <table class="table-items">
+          <tr>
+            <td>Fila 1 (impar)</td>
+          </tr>
+          <tr>
+            <td>Fila 2 (par)</td>
+          </tr>
+          <tr>
+            <td>Fila 3 (impar)</td>
+          </tr>
+          <tr>
+            <td>Fila 4 (par)</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- :not() -->
+    <div class="example">
+      <h2>:not() - Excluir elementos</h2>
+      <div class="example-code">
+        .note:not(.important) { opacity: 0.7; }
+      </div>
+      <div class="example-demo">
+        <div class="note">Nota normal (más opaca)</div>
+        <div class="note important">Nota importante (más visible)</div>
+        <div class="note">Otra nota normal (más opaca)</div>
+      </div>
+    </div>
+
+    <!-- :disabled y :enabled -->
+    <div class="example">
+      <h2>:disabled y :enabled</h2>
+      <div class="example-code">
+        input:enabled { background-color: white; }<br>
+        input:disabled { background-color: #f5f5f5; }
+      </div>
+      <div class="example-demo">
+        <div class="form-group">
+          <input type="text" class="form-group" placeholder="Input habilitado" enabled>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-group" placeholder="Input deshabilitado" disabled>
+        </div>
+      </div>
+    </div>
+
+    <!-- :checked -->
+    <div class="example">
+      <h2>:checked - Elementos seleccionados</h2>
+      <div class="example-code">
+        input[type="checkbox"]:checked + label { color: #667eea; }
+      </div>
+      <div class="example-demo">
+        <div class="checkbox-group">
+          <div class="checkbox-item">
+            <input type="checkbox" id="cb1">
+            <label for="cb1">Opción 1</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="cb2">
+            <label for="cb2">Opción 2</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="cb3">
+            <label for="cb3">Opción 3</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

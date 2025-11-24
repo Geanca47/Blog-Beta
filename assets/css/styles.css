@@ -1,0 +1,80 @@
+/**** 1. Tipos de Selectores ****/
+/* Selectores de Etiqueta */
+h1 {
+color: darkblue;
+font-family: Arial, sans-serif;
+}
+
+body {
+background-color: #f0f0f0;
+}
+
+/* Selectores por Clase */
+.verde {
+color: green;
+}
+
+.centrado {
+text-align: center;
+}
+
+.grande
+{
+font-size: 40px;
+color: red;
+}
+
+/* Selectores por ID */
+#title {
+color: yellow;
+}
+
+/**** 2. Selectores Combinados ****/
+
+/* Selector Descendiente ( ) */
+.card p {
+color: lightgreen;
+}
+
+/* Selector Hijo (>) */
+.menu > ul > li {
+font-weight: bold;
+color: darkgreen;
+}
+
+/* Selector de Clase (.)*/
+p.big {
+background-color: white;
+}
+
+/* Selector de Varios Elementos (,) */
+h4,h5 {
+text-transform: uppercase;
+}  
+
+/* Adjacent sibling selector (+) */
+h4 + p {
+color: orange;
+font-weight: bold;
+}
+
+/* General sibling selector (~) */ 
+h6 ~ p {
+color: teal;
+font-style: italic;
+}
+  
+/* Una combinacion de todos */ 
+.contenedor .articulo > p + p {
+color: purple;
+font-weight: bold;
+}
+
+
+
+
+
+
+
+
+

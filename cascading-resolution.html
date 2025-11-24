@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cascading Resolution </title>
+
+<style>
+
+body {
+color: green;
+}
+
+p {
+color: blue;
+}
+/*  
+span {
+  color: inherit;
+}
+Las propiedades que si se heredan automaticamente y no necesitan inherit son:
+color, font-family, font-size, line-height, visibility, entonces aqui no hace falta...
+*/
+
+/*  Aqui las propiedades que no se heredan automaticamente son:
+margin, padding, border, background, width and height
+entonces aqui si se usa el inherit para que h3 herede las propiedades
+de su padre, de otra forma, aparece como el sistema lo tiene por defecto */
+div {
+border: 2px solid red;
+  margin: 20px;
+}
+
+h3 {
+border: inherit;
+margin: inherit;
+}
+
+</style>
+</head>
+
+<body>
+    
+<p>Hola <span>Geanca</span></p>
+
+<div>
+    U Latina 
+<h3> Universidad Latina de Costa Rica 
+</h3>
+</div>
+
+</body>
+</html>

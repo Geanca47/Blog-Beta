@@ -1,0 +1,32 @@
+/* 1️⃣ DESCENDENT SELECTOR (espacio) */
+article p {
+  color: darkblue;
+}
+/* Afecta todos los <p> dentro de 
+<article> (sin importar cuán 
+profundos estén) */
+
+/* 2️⃣ CHILD SELECTOR (>) */
+article > p {
+  background-color: #e6f7ff;
+}
+/* Afecta solo los <p> que son 
+hijos directos de <article> */
+
+/* 3️⃣ ADJACENT SIBLING SELECTOR (+) */
+h2 + p {
+  font-weight: bold;
+  color: crimson;
+}
+/* Afecta el <p> que está 
+inmediatamente después de 
+cada <h2> */
+
+/* 4️⃣ GENERAL SIBLING SELECTOR (~) */
+h2 ~ p {
+  font-style: italic;
+}
+/* Afecta todos los <p> que están
+después de <h2> (no solo el 
+primero) */
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Modelo de Caja </title>
+<style>
+
+/*  
+* {
+box-sizing: border-box;
+}
+.box {
+width: 200px;
+padding: 20px;
+border: 5px solid blue;
+margin: 15px;
+}*/
+/* Siempre se pone aqui para todos
+elementos con border box
+y limpio el margin y padding a 0;*/
+* { 
+box-sizing: border-box; 
+margin: 0;
+padding:0; }
+
+body {
+background-color: gray;
+}
+
+#box {
+background-color: blue;
+padding: 10px;
+border:  5px solid black;
+/* margin: 40px; */
+margin-top: 50px;  
+width: 300px;
+/* aqui en realidad el ancho
+seria 300px + padding derecho 10px
++ padding izquierdo 10px + border 5px
++ border 5px = 330px 
+so we set the width of the content box
+instead of width of the box
+*/
+height: 50px;
+/* entonces para que no se derrame el contenido se pone: */
+overflow: auto;
+}
+/* Entonces con border box
+todo el ancho tiene 200px +
+padding 30px + padding 30px 
++ border 20px + border 20px
+= 300px (el ancho de la caja)
+y el navegador asigna automatico
+la altura de 85.33 porque:
+Contenido interior: depende del texto/elementos que estén dentro
+Padding vertical: 10px (arriba) + 10px (abajo) = 20px
+Border vertical: 20px (arriba) + 20px (abajo) = 40px
+Entonces: Contenido + 20px (padding) + 40px (border) = 85.333px
+Eso significa que tu contenido interior
+mide aproximadamente 25.333px de 
+alto (85.333 - 20 - 40 = 25.333).
+Por eso width es más importante especificar 
+(porque querés controlar el ancho del layout), 
+pero el height muchas veces se deja que 
+se calcule solo.
+*/
+#content {
+background-color: #90ee90
+}
+
+h1 {
+margin-bottom: 30px;
+}
+
+</style>
+</head>
+
+<body>
+<!-- <div class="box"> Este es un Ejemplo de Modelo de Caja en CSS </div> -->
+
+<h1> Model Box </h1>
+<div id="box">
+    <div id="content">
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam a error voluptate unde iste? Deleniti reiciendis animi accusamus vero iste nulla. Incidunt hic deleniti quas voluptatem modi ipsam libero cupiditate?    </div>
+</div>
+<!-- este div es para demostrar que cuando se riega el 
+ contenido por el height se incrusta este div y se ve mal 
+<div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, dolores.</div> -->
+
+</body>
+</html>

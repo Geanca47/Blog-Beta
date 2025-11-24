@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> CSS Practice from ChatGPT, Coursera and Desafio Latam </title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<!-- 1. Tipos de Selectores -->
+
+<!-- 1.1. Selectores por Etiqueta -->
+<h1> Welcome to the Jungle </h1>
+
+<!-- 1.2 Selectores por Clase -->
+<h2 class="verde centrado">Descubre lo último en tecnología bebiendo café</h2>
+<p class="grande"> Este parrafo esta en grande y en rojo</p>
+
+<!-- 1.3 Selectores por ID -->
+<h3 id="title"> Esto es en amarillo </h3>
+
+<hr>
+
+<!-- 2. Selectores Combinados -->
+
+<!-- 2.1. Selector Descendiente ( ) 
+👉 Selecciona elementos 
+que están dentro (anidados) de otro elemento. -->
+<div class="card">
+  <h2>Título del artículo</h2>
+  <p>Este párrafo está dentro y es verde claro.</p>
+</div>
+<p>Este párrafo está fuera de la tarjeta.</p>
+<p><strong> &uarr; Solo el p dentro del div class="card" se verde claro.
+El párrafo que está afuera no se afecta. &uarr; </strong></p>
+
+<!-- 2.2. Selector Hijo (>)
+👉 Selecciona los hijos directos de un elemento, 
+no los nietos ni más abajo. -->
+<div class="menu">
+  <ul>
+    <li>Inicio</li>
+    <li>Servicios
+    <ul>
+      <li>Subservicio 1</li>
+      <li>Subservicio 2</li>
+    </ul>
+    </li>
+  </ul>
+
+  
+</div>
+<p><strong> &uarr; Solo los li directamente dentro 
+del primer ul se vuelven verdes y en negrita.
+Los de la sublista (subservicios) no se tocan. &uarr; </strong></p>
+
+<!-- Selector de Clase (.)
+👉 Selecciona el elemento que tenga esa clase -->
+<p class="big"> Este parrafo tiene el fondo blanco</p>
+<div class="big"> unaffected text porque es un div y no un parrafo</div>
+
+<!-- Selector de Varios Elementos (,) -->
+<h4> Este texto H4 esta en mayuscula </h4>
+<h5> Este texto H5 esta en mayuscula</h5>
+
+<!-- Adjacent sibling selector (+)
+👉 Selecciona un elemento que viene 
+inmediatamente después de otro, al mismo nivel. -->
+<h4>Título principal</h4>
+<p>Este párrafo viene justo después del h4 (TITULO PRINCIPAL) en naranja.</p>
+<p>Este párrafo ya no.</p>
+<p><strong> &uarr; Solo el primer p que está justo 
+después del h4 se vuelve naranja y en negrita. &uarr; </strong></p>
+
+<!-- General sibling selector (~)
+👉 Selecciona todos los elementos que vienen después 
+de otro, sin importar si hay otros entre ellos 
+(mismo nivel). --> 
+<h6>Sección de Noticias Pequenas (h6) </h6>
+<p>Noticia 1</p>
+<p>Noticia 2</p>
+<p>Noticia 3</p>
+<p><strong> &uarr; Todos los p que 
+están después del h6 se vuelven color 
+verde azulado e itálicos.  &uarr; </strong></p>
+ 
+<!-- 💡 BONUS: Combinarlos todos
+Podés mezclar varios 
+combinadores para lograr estilos muy específicos: -->
+<div class="contenedor">
+  <section class="articulo">
+    <h2>Mi Blog</h2>
+    <p>Primer párrafo del artículo.</p>
+    <p>Segundo párrafo.</p>
+  </section>
+  <footer>Derechos reservados</footer>
+</div>
+<p><strong> &uarr; Explicación:
+.contenedor .articulo → busca dentro del contenedor
+una sección de clase “articulo”.
+> p + p → selecciona el segundo p que viene después 
+del primero (hermano inmediato).
+Resultado: solo el segundo párrafo del
+artículo se pone morado y en negrita. &uarr; </strong></p>
+
+</body>
+</html>
+

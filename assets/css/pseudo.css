@@ -1,0 +1,19 @@
+/* :hover 👉 Se activa cuando el usuario 
+pasa el mouse sobre un elemento. */
+.btn {
+  background: royalblue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: dodgerblue;
+  transform: scale(1.1);
+}
+
+div, span {
+  background-color: blue;
+}
