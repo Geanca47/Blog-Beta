@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exégesis Mateo 25:31-46</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        header {
+            background-color: #9C0001;
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header .subtitle {
+            font-size: 1.3em;
+            font-style: italic;
+            opacity: 0.95;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        h2 {
+            color: #9C0001;
+            font-size: 2em;
+            margin: 50px 0 25px 0;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            font-weight: 700;
+        }
+
+        h3 {
+            color: #9C0001;
+            font-size: 1.5em;
+            margin: 35px 0 20px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #9C0001;
+            font-size: 1.2em;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .verse {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 20px 25px;
+            margin: 25px 0;
+            font-style: italic;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .greek-term {
+            color: #e74c3c;
+            font-weight: 600;
+            font-family: 'Courier New', monospace;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 5px solid #e17055;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .highlight-box h4 {
+            color: #d63031;
+            margin-top: 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fab1a0 0%, #ff7675 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 5px solid #d63031;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .warning-box h4 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 5px solid #0652DD;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .info-box h4 {
+            color: white;
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e1e8ed;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        tr:hover {
+            background: #e3f2fd;
+        }
+
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            margin: 60px 0;
+            border-radius: 2px;
+        }
+
+        strong {
+            color: #2d3436;
+            font-weight: 700;
+        }
+
+        em {
+            color: #636e72;
+        }
+
+        blockquote {
+            border-left: 5px solid #764ba2;
+            padding-left: 25px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #636e72;
+        }
+
+        .conclusion {
+            background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 50px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .conclusion h3 {
+            color: white;
+            border-bottom: 2px solid white;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 30px 20px;
+            }
+
+            header {
+                padding: 40px 20px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            table {
+                font-size: 0.9em;
+            }
+        }
+
+        .toc {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .toc h3 {
+            color: #9C0001;
+            margin-top: 0;
+        }
+
+        .toc ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .toc li {
+            padding: 8px 0;
+        }
+
+        .toc a {
+            color: #9C0001;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .toc a:hover {
+            color: #880808;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Analisis Escatologico </h1>
+            <div class="subtitle">Mateo 25:31-46 - El Juicio de las Naciones</div>
+        </header>
+
+        <div class="content">
+            <div class="toc">
+                <h3>Tabla de Contenidos</h3>
+                <ul>
+                    <li><a href="#contexto">I. Texto y Contexto Literario</a></li>
+                    <li><a href="#estructura">II. Estructura Literaria</a></li>
+                    <li><a href="#exegesis">III. Análisis Exegético Versículo por Versículo</a></li>
+                    <li><a href="#temas">IV. Temas Teológicos Principales</a></li>
+                    <li><a href="#problemas">V. Problemas Teológicos y Respuestas</a></li>
+                    <li><a href="#aplicaciones">VI. Aplicaciones Prácticas</a></li>
+                    <li><a href="#sintesis">VII. Síntesis Teológica Final</a></li>
+                </ul>
+            </div>
+
+            <section id="contexto">
+                <h2>I. TEXTO Y CONTEXTO LITERARIO</h2>
+                
+                <h3>Ubicación en Mateo</h3>
+                <p>Este pasaje cierra el <strong>Discurso del Monte de los Olivos</strong> (Mateo 24-25), el último gran discurso de Jesús antes de su Pasión. La estructura es:</p>
+                <ul>
+                    <li><strong>Mateo 24:</strong> Señales de la Parusía y destrucción del Templo</li>
+                    <li><strong>Mateo 25:1-13:</strong> Parábola de las diez vírgenes (preparación)</li>
+                    <li><strong>Mateo 25:14-30:</strong> Parábola de los talentos (fidelidad)</li>
+                    <li><strong>Mateo 25:31-46:</strong> Juicio final (consumación escatológica)</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h4>Nota Importante</h4>
+                    <p>Este pasaje NO es una parábola sino una <strong>revelación apocalíptica directa</strong> del juicio final. Jesús habla en primera persona como Juez escatológico.</p>
+                </div>
+
+                <h3>Contexto teológico en Mateo</h3>
+                <p>Mateo presenta consistentemente a Jesús como:</p>
+                <ul>
+                    <li><strong>Rey Mesiánico</strong> (genealogía davídica, adoración de magos)</li>
+                    <li><strong>Legislador mayor que Moisés</strong> (Sermón del Monte)</li>
+                    <li><strong>Juez escatológico</strong> (aquí culmina este tema)</li>
+                </ul>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <section id="estructura">
+                <h2>II. ESTRUCTURA LITERARIA DEL PASAJE</h2>
+                
+                <p>El texto tiene una estructura quiásmica perfecta:</p>
+                
+                <div class="verse">
+                    <strong>A.</strong> Venida gloriosa del Hijo del Hombre (v. 31-33)<br>
+                    &nbsp;&nbsp;<strong>B.</strong> Bendición a las ovejas y sus obras (v. 34-36)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<strong>C.</strong> Perplejidad de los justos (v. 37-39)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>D.</strong> CENTRO: Identificación de Cristo con "los más pequeños" (v. 40)<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<strong>C'.</strong> Perplejidad de los injustos (v. 44)<br>
+                    &nbsp;&nbsp;<strong>B'.</strong> Maldición a los cabritos y omisión de obras (v. 41-43, 45)<br>
+                    <strong>A'.</strong> Destino eterno diferenciado (v. 46)
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <section id="exegesis">
+                <h2>III. ANÁLISIS EXEGÉTICO VERSÍCULO POR VERSÍCULO</h2>
+
+                <h3>Versículo 31 - "Cuando el Hijo del Hombre venga en su gloria..."</h3>
+                
+                <h4>Griego clave:</h4>
+                <ul>
+                    <li><span class="greek-term">ἔλθῃ (elthē)</span> - "venga" (subjuntivo aoristo: evento futuro definido)</li>
+                    <li><span class="greek-term">δόξῃ (doxē)</span> - "gloria" (esplendor divino visible)</li>
+                    <li><span class="greek-term">πάντες οἱ ἄγγελοι (pantes hoi angeloi)</span> - "todos los ángeles"</li>
+                </ul>
+
+                <h4>Teología:</h4>
+                <ul>
+                    <li><strong>"Hijo del Hombre":</strong> Jesús se identifica con Daniel 7:13-14 donde el Hijo del Hombre recibe dominio eterno</li>
+                    <li>La <strong>"gloria"</strong> contrasta dramáticamente con su humillación en la cruz (caps. 26-27)</li>
+                    <li><strong>Ángeles como séquito:</strong> Deuteronomio 33:2, Zacarías 14:5 - teofanía con ejército celestial</li>
+                    <li>Esta no es la primera venida (humilde, en pesebre) sino la <strong>Parusía gloriosa</strong></li>
+                </ul>
+
+                <h3>Versículo 32 - "Y serán reunidas delante de él todas las naciones..."</h3>
+
+                <h4>Griego clave:</h4>
+                <ul>
+                    <li><span class="greek-term">πάντα τὰ ἔθνη (panta ta ethnē)</span> - "todas las naciones/gentiles"</li>
+                    <li><span class="greek-term">συναχθήσονται (synachthēsontai)</span> - "serán reunidas" (pasivo divino: Dios mismo los reúne)</li>
+                    <li><span class="greek-term">ἀφορίσει (aphorisei)</span> - "separará" (futuro activo: acción definitiva)</li>
+                </ul>
+
+                <div class="info-box">
+                    <h4>Pregunta exegética crucial: ¿Quiénes son "todas las naciones"?</h4>
+                    
+                    <p><strong>Opción 1: Todas las personas de la historia (judíos y gentiles)</strong></p>
+                    <ul>
+                        <li>Favorecida por la mayoría de comentaristas</li>
+                        <li>"Naciones" = toda la humanidad</li>
+                        <li>Juicio universal final</li>
+                    </ul>
+
+                    <p><strong>Opción 2: Solo los gentiles (naciones distintas a Israel)</strong></p>
+                    <ul>
+                        <li>Algunos dispensacionalistas</li>
+                        <li>Israel ya fue juzgado en otra instancia</li>
+                        <li>Juicio específico de cómo trataron al pueblo de Dios</li>
+                    </ul>
+
+                    <p><strong>Evidencia contextual más fuerte: Opción 1</strong></p>
+                    <ul>
+                        <li>Mateo 28:19 usa mismo término para "todas las naciones" como objeto de evangelización</li>
+                        <li>Apocalipsis 20:12 presenta juicio universal</li>
+                        <li>No hay indicación de juicio separado aquí</li>
+                    </ul>
+                </div>
+
+                <h3>Versículos 32b-33 - "Como aparta el pastor las ovejas de los cabritos..."</h3>
+
+                <h4>Imagen del Antiguo Testamento:</h4>
+                <p>Ezequiel 34:17-22 - Dios juzga entre oveja y oveja, carneros y machos cabríos. Contexto: líderes corruptos vs. pueblo fiel.</p>
+
+                <h4>Significado cultural:</h4>
+                <p>En Palestina, ovejas y cabras pastaban juntas durante el día pero se separaban de noche:</p>
+                <ul>
+                    <li><strong>Ovejas:</strong> mansedumbre, obediencia, utilidad (lana, carne)</li>
+                    <li><strong>Cabritos:</strong> independencia, terquedad, menos valiosos</li>
+                </ul>
+
+                <h4>Derecha vs. Izquierda:</h4>
+                <ul>
+                    <li><strong>Derecha (δεξιῶν):</strong> posición de honor, favor, poder (Salmo 110:1)</li>
+                    <li><strong>Izquierda:</strong> secundaria, menor honor</li>
+                </ul>
+
+                <h3>Versículo 34 - "Entonces el Rey dirá a los de su derecha..."</h3>
+
+                <h4>"EL REY" (ὁ βασιλεύς)</h4>
+                <ul>
+                    <li>Primera vez que Jesús se llama explícitamente "Rey" en este discurso</li>
+                    <li>Cumplimiento de la promesa davídica</li>
+                    <li>Autoridad para bendecir y maldecir</li>
+                </ul>
+
+                <h4>"Venid, benditos de mi Padre"</h4>
+                <ul>
+                    <li><span class="greek-term">εὐλογημένοι (eulogēmenoi)</span> - "bendecidos" (participio perfecto pasivo: estado permanente de bendición)</li>
+                    <li><span class="greek-term">τοῦ Πατρός μου</span> - "de mi Padre" - La bendición viene del Padre por decreto del Hijo</li>
+                    <li>Contrasta con maldición del v. 41</li>
+                </ul>
+
+                <h4>"Heredad el reino preparado para vosotros desde la fundación del mundo"</h4>
+
+                <p><strong>Griego clave:</strong></p>
+                <ul>
+                    <li><span class="greek-term">κληρονομήσατε (klēronomēsate)</span> - "heredad" (imperativo aoristo: tomen posesión ahora)</li>
+                    <li><span class="greek-term">ἡτοιμασμένην (hētoimasmenēn)</span> - "preparado" (participio perfecto pasivo: completado y permanente)</li>
+                    <li><span class="greek-term">ἀπὸ καταβολῆς κόσμου</span> - "desde la fundación del mundo"</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h4>Teología profunda:</h4>
+                    <ul>
+                        <li>El reino NO se gana por obras; fue <strong>preparado de antemano</strong></li>
+                        <li>Efesios 1:4 - "nos escogió en él antes de la fundación del mundo"</li>
+                        <li>Las obras que siguen (v. 35-36) son <strong>EVIDENCIA</strong>, no <strong>CAUSA</strong> de la salvación</li>
+                        <li>Esto es crucial: el juicio es basado en obras, pero las obras revelan fe genuina</li>
+                    </ul>
+                </div>
+
+                <h3>Versículos 35-36 - Las seis obras de misericordia</h3>
+
+                <h4>Lista estructurada en tres pares:</h4>
+
+                <p><strong>Par 1 - Necesidades básicas de supervivencia:</strong></p>
+                <ol>
+                    <li>"Tuve hambre, y me disteis de comer" (<span class="greek-term">ἐπείνασα</span>)</li>
+                    <li>"Tuve sed, y me disteis de beber" (<span class="greek-term">ἐδίψησα</span>)</li>
+                </ol>
+
+                <p><strong>Par 2 - Necesidades de protección/refugio:</strong></p>
+                <ol start="3">
+                    <li>"Fui forastero, y me recogisteis" (<span class="greek-term">ξένος ἤμην</span>: extranjero/vulnerable)</li>
+                    <li>"Estuve desnudo, y me cubristeis" (<span class="greek-term">γυμνός</span>: mal vestido/expuesto)</li>
+                </ol>
+
+                <p><strong>Par 3 - Necesidades en crisis extrema:</strong></p>
+                <ol start="5">
+                    <li>"Enfermo, y me visitasteis" (<span class="greek-term">ἠσθένησα</span>)</li>
+                    <li>"En la cárcel, y vinisteis a mí" (<span class="greek-term">ἐν φυλακῇ</span>)</li>
+                </ol>
+
+                <h4>Análisis teológico:</h4>
+
+                <p><strong>¿Por qué estas seis específicamente?</strong></p>
+                <ul>
+                    <li>Representan <strong>vulnerabilidad total</strong>: hambre, sed, desamparo, enfermedad, prisión</li>
+                    <li>Requieren <strong>sacrificio personal</strong> del que ayuda</li>
+                    <li>No son "caridad a distancia" sino <strong>involucramiento cercano</strong></li>
+                    <li>Todas son costosas: tiempo, recursos, reputación (visitar presos era peligroso)</li>
+                </ul>
+
+                <p><strong>Trasfondo del Antiguo Testamento:</strong></p>
+                <ul>
+                    <li><strong>Isaías 58:6-7</strong> - El ayuno que Dios escoge: compartir pan con hambriento, hospedar pobres, vestir desnudo</li>
+                    <li><strong>Ezequiel 18:7-8</strong> - Características del justo</li>
+                    <li><strong>Job 31:16-32</strong> - Job se defiende listando estas mismas obras</li>
+                </ul>
+
+                <div class="info-box">
+                    <h4>NO son las únicas obras cristianas, son REPRESENTATIVAS</h4>
+                    <ul>
+                        <li>No menciona evangelismo, oración, adoración</li>
+                        <li>Pero estas obras <strong>fluyen naturalmente</strong> de una vida regenerada</li>
+                        <li>Santiago 2:14-17 - "La fe sin obras es muerta"</li>
+                    </ul>
+                </div>
+
+                <h3>Versículos 37-39 - Perplejidad de los justos</h3>
+
+                <div class="verse">
+                    "Entonces los justos le responderán diciendo: Señor, ¿cuándo te vimos...?"
+                </div>
+
+                <p><span class="greek-term">δίκαιοι (dikaioi)</span> - "justos"</p>
+                <ul>
+                    <li>No "auto-justificados" sino <strong>declarados justos por Dios</strong></li>
+                    <li>Su perplejidad revela <strong>humildad genuina</strong></li>
+                    <li>No llevaban "registro" de sus buenas obras</li>
+                </ul>
+
+                <h4>Teología de la inconsciencia:</h4>
+                <p>Esta perplejidad es <strong>CRUCIAL TEOLÓGICAMENTE</strong>:</p>
+
+                <ol>
+                    <li><strong>Las obras genuinas son inconscientes/naturales</strong>
+                        <ul>
+                            <li>No calculadas para recompensa</li>
+                            <li>Fluyen de un corazón transformado</li>
+                            <li>Mateo 6:3 - "No sepa tu izquierda lo que hace tu derecha"</li>
+                        </ul>
+                    </li>
+                    <li><strong>Contraste con fariseos:</strong>
+                        <ul>
+                            <li>Fariseos: obras para ser vistos (Mateo 6:2, 5, 16)</li>
+                            <li>Justos aquí: ni siquiera recuerdan sus obras</li>
+                        </ul>
+                    </li>
+                    <li><strong>No buscaban recompensa:</strong>
+                        <ul>
+                            <li>Sirvieron por amor, no por cálculo</li>
+                            <li>1 Corintios 13:3 - dar sin amor no vale nada</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Versículo 40 - EL VERSÍCULO CENTRAL (clímax teológico)</h3>
+
+                <div class="verse">
+                    "En cuanto lo hicisteis a uno de estos mis hermanos más pequeños, a mí lo hicisteis"
+                </div>
+
+                <h4>Griego crucial:</h4>
+                <ul>
+                    <li><span class="greek-term">ἐφ' ὅσον (eph' hoson)</span> - "en cuanto/en la medida que"</li>
+                    <li><span class="greek-term">ἑνὸς τούτων τῶν ἀδελφῶν μου τῶν ἐλαχίστων</span> - "uno de estos hermanos míos de los más pequeños"</li>
+                    <li><span class="greek-term">ἐμοὶ ἐποιήσατε (emoi epoiēsate)</span> - "a MÍ lo hicisteis" (énfasis en el pronombre)</li>
+                </ul>
+
+                <div class="warning-box">
+                    <h4>PREGUNTA EXEGÉTICA CRÍTICA: ¿Quiénes son "mis hermanos más pequeños"?</h4>
+
+                    <p><strong>Interpretación 1: TODOS los necesitados (universal)</strong></p>
+                    <ul>
+                        <li>Cualquier persona en necesidad</li>
+                        <li>Cristo se identifica con toda la humanidad sufriente</li>
+                        <li>Favorecida por tradición católica y teología de liberación</li>
+                    </ul>
+
+                    <p><strong>Interpretación 2: Los DISCÍPULOS de Cristo específicamente (particularista)</strong></p>
+                    <ul>
+                        <li>"Mis hermanos" = seguidores de Jesús</li>
+                        <li>"Los más pequeños" = discípulos humildes/perseguidos</li>
+                        <li>Favorecida por evangélicos conservadores y reformados</li>
+                    </ul>
+
+                    <p><strong>Argumentos más fuertes para Interpretación 2:</strong></p>
+                    <ol>
+                        <li><strong>Uso consistente en Mateo de "hermanos":</strong>
+                            <ul>
+                                <li>Mateo 12:48-50 - "¿Quiénes son mis hermanos? Los que hacen la voluntad de mi Padre"</li>
+                                <li>Mateo 28:10 - "Id, dad las nuevas a mis hermanos" (los discípulos)</li>
+                                <li>Mateo 23:8 - "todos vosotros sois hermanos" (contexto: comunidad de discípulos)</li>
+                            </ul>
+                        </li>
+                        <li><strong>"Los más pequeños" (ἐλαχίστων) en Mateo:</strong>
+                            <ul>
+                                <li>Mateo 10:42 - "cualquiera que dé a uno de estos pequeñitos un vaso de agua fría solamente, por cuanto es discípulo"</li>
+                                <li>Mateo 18:6, 10, 14 - "estos pequeños que creen en mí"</li>
+                                <li>Consistentemente se refiere a discípulos, no a humanidad en general</li>
+                            </ul>
+                        </li>
+                        <li><strong>Contexto de Mateo 10:</strong>
+                            <ul>
+                                <li>Jesús envía discípulos (cap. 10)</li>
+                                <li>Promete que quien los recibe, a Él recibe (10:40)</li>
+                                <li>Quien les da agua por ser discípulos, tendrá recompensa (10:42)</li>
+                                <li>Mateo 25:40 es el cumplimiento escatológico de Mateo 10:40-42</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <h4>Teología de la identificación:</h4>
+                <ul>
+                    <li>Cristo se <strong>identifica místicamente</strong> con su pueblo</li>
+                    <li>Hechos 9:4 - "Saulo, ¿por qué me persigues?" (perseguía a iglesia, no a Cristo directamente)</li>
+                    <li>Hebreos 2:11 - "no se avergüenza de llamarlos hermanos"</li>
+                    <li>Lo que se hace al cuerpo de Cristo, se hace a la Cabeza</li>
+                </ul>
+
+                <h3>Versículo 41 - Maldición de los cabritos</h3>
+
+                <div class="verse">
+                    "Entonces dirá también a los de la izquierda: Apartaos de mí, malditos..."
+                </div>
+
+                <h4>Contraste dramático con v. 34:</h4>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ovejas (v. 34)</th>
+                            <th>Cabritos (v. 41)</th>
+                            </tr>
+                            <tr>
+
+                             <td>"Venid" (δεῦτε)</td>
+                        <td>"Apartaos" (πορεύεσθε)</td>
+                    </tr>
+                    <tr>
+                        <td>"Benditos de mi Padre"</td>
+                        <td>"Malditos" (κατηραμένοι)</td>
+                    </tr>
+                    <tr>
+                        <td>"Heredad el reino preparado"</td>
+                        <td>"Id al fuego eterno preparado"</td>
+                    </tr>
+                    <tr>
+                        <td>"Desde la fundación del mundo"</td>
+                        <td>"Para el diablo y sus ángeles"</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4>"Al fuego eterno preparado para el diablo y sus ángeles"</h4>
+
+            <div class="highlight-box">
+                <h4>Teología crítica:</h4>
+                <ul>
+                    <li>El infierno <strong>NO fue preparado para humanos</strong> originalmente</li>
+                    <li>Fue preparado para <strong>Satanás y ángeles caídos</strong> (2 Pedro 2:4, Judas 6)</li>
+                    <li>Los humanos que lo rechazan a Cristo <strong>se unen voluntariamente</strong> al destino de Satanás</li>
+                    <li>Esto muestra que la condenación humana es <strong>secundaria</strong> al plan de Dios, no primaria</li>
+                </ul>
+            </div>
+
+            <p><span class="greek-term">πῦρ τὸ αἰώνιον (pyr to aiōnion)</span> - "fuego eterno"</p>
+            <ul>
+                <li><span class="greek-term">αἰώνιον (aiōnion)</span>: de αἰών (aión = edad/eternidad)</li>
+                <li>Misma palabra usada para "vida eterna" (v. 46)</li>
+                <li>Si la vida es eterna, el castigo también lo es (paralelismo requiere consistencia)</li>
+            </ul>
+
+            <h3>Versículos 42-43 - Omisión de las obras</h3>
+
+            <div class="verse">
+                "Porque tuve hambre, y no me disteis de comer..."
+            </div>
+
+            <h4>Estructura paralela invertida con v. 35-36:</h4>
+            <ul>
+                <li>No son <strong>crímenes activos</strong> sino <strong>OMISIÓN</strong></li>
+                <li>Santiago 4:17 - "Al que sabe hacer lo bueno y no lo hace, le es pecado"</li>
+                <li>El pecado no es solo hacer mal, sino <strong>dejar de hacer el bien</strong></li>
+            </ul>
+
+            <h4>Teología de la fe muerta:</h4>
+            <ul>
+                <li>No niegan verbalmente a Cristo (pueden ser "religiosos")</li>
+                <li>Pero su <strong>inacción</strong> revela ausencia de vida espiritual</li>
+                <li>Santiago 2:14-17 - Fe sin obras está muerta</li>
+            </ul>
+
+            <h3>Versículo 44 - Perplejidad de los impíos</h3>
+
+            <div class="verse">
+                "Entonces también ellos le responderán diciendo: Señor, ¿cuándo te vimos...?"
+            </div>
+
+            <h4>Contraste con la perplejidad de los justos (v. 37):</h4>
+
+            <p><strong>Justos preguntaron:</strong> "¿Cuándo te servimos?" (sorprendidos de haber servido a Cristo)</p>
+            <p><strong>Impíos preguntan:</strong> "¿Cuándo NO te servimos?" (sorprendidos de ser condenados)</p>
+
+            <h4>Su error teológico:</h4>
+            <ul>
+                <li>Pensaban que su <strong>religiosidad formal</strong> era suficiente</li>
+                <li>Mateo 7:21-23 - "Señor, Señor, ¿no profetizamos en tu nombre...? Apartaos de mí, hacedores de maldad"</li>
+                <li>Tenían ortodoxia verbal ("Señor") pero no ortopraxis (obras)</li>
+            </ul>
+
+            <h4>El autoengaño:</h4>
+            <ul>
+                <li>Creían tener relación con Cristo</li>
+                <li>Pero sus vidas contradecían su confesión</li>
+                <li>1 Juan 3:17 - "El que tiene bienes de este mundo y ve a su hermano tener necesidad, y cierra contra él su corazón, ¿cómo mora el amor de Dios en él?"</li>
+            </ul>
+
+            <h3>Versículo 45 - Respuesta paralela del Rey</h3>
+
+            <div class="verse">
+                "En cuanto no lo hicisteis a uno de estos más pequeños, tampoco a mí lo hicisteis"
+            </div>
+
+            <h4>Simetría perfecta con v. 40:</h4>
+            <ul>
+                <li>Acción hacia "los más pequeños" = acción hacia Cristo</li>
+                <li><strong>Omisión</strong> hacia "los más pequeños" = omisión hacia Cristo</li>
+            </ul>
+
+            <h4>Implicación teológica:</h4>
+            <ul>
+                <li>No puedes amar a Dios a quien no ves, si no amas al hermano a quien sí ves (1 Juan 4:20)</li>
+                <li>La religión "vertical" (Dios) se valida por la horizontal (prójimo)</li>
+                <li>Santiago 1:27 - "La religión pura y sin mácula... es visitar a los huérfanos y a las viudas"</li>
+            </ul>
+
+            <h3>Versículo 46 - Conclusión solemne: Destino eterno</h3>
+
+            <div class="verse">
+                "E irán éstos al castigo eterno, y los justos a la vida eterna"
+            </div>
+
+            <h4>Griego crucial:</h4>
+            <ul>
+                <li><span class="greek-term">κόλασιν αἰώνιον (kolasin aiōnion)</span> - "castigo eterno"</li>
+                <li><span class="greek-term">ζωὴν αἰώνιον (zōēn aiōnion)</span> - "vida eterna"</li>
+            </ul>
+
+            <div class="warning-box">
+                <h4>MISMA palabra (αἰώνιον) para ambos destinos</h4>
+                <p>Esto destruye el argumento aniquilacionista que dice:</p>
+                <ul>
+                    <li>"Eterno solo modifica la vida, pero el castigo termina"</li>
+                    <li>Si uno es temporal, ambos lo son</li>
+                    <li>Si uno es eterno, ambos lo son</li>
+                    <li><strong>Paralelismo gramátical exige consistencia</strong></li>
+                </ul>
+            </div>
+
+            <p><span class="greek-term">κόλασις (kolasis)</span> - "castigo":</p>
+            <ul>
+                <li>No simple "corrección" (παιδεία - paideia)</li>
+                <li>Sino castigo <strong>penal, retributivo</strong></li>
+                <li>Mateo usa término más fuerte disponible</li>
+            </ul>
+
+            <h4>Teología del juicio final:</h4>
+            <ul>
+                <li>Es <strong>irreversible</strong> - "irán" (futuro definitivo)</li>
+                <li>Es <strong>consciente</strong> - se dan cuenta de su error (v. 44)</li>
+                <li>Es <strong>justo</strong> - basado en obras verificables</li>
+                <li>Es <strong>eterno</strong> - sin final</li>
+            </ul>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="temas">
+            <h2>IV. TEMAS TEOLÓGICOS PRINCIPALES</h2>
+
+            <h3>1. CRISTOLOGÍA: Cristo como Juez Escatológico</h3>
+            <ul>
+                <li>No es simplemente un profeta que predice el juicio</li>
+                <li>ÉL ES el Juez (el Rey, v. 34)</li>
+                <li>Autoridad divina para bendecir y maldecir</li>
+                <li>Cumplimiento de Daniel 7:13-14</li>
+            </ul>
+
+            <h3>2. SOTERIOLOGÍA: Relación Fe-Obras</h3>
+
+            <p><strong>Este pasaje NO enseña salvación por obras, sino:</strong></p>
+
+            <h4>A. Las obras son EVIDENCIA de fe salvadora:</h4>
+            <ul>
+                <li>Los justos ya están "benditos del Padre" (v. 34)</li>
+                <li>El reino fue "preparado desde la fundación" (elección/predestinación)</li>
+                <li>Las obras <strong>manifiestan</strong> la regeneración, no la causan</li>
+            </ul>
+
+            <h4>B. Armonía con Pablo:</h4>
+            <ul>
+                <li>Efesios 2:8-10 - "Salvos por gracia... creados en Cristo para buenas obras"</li>
+                <li>Santiago 2:14-26 - "La fe sin obras está muerta"</li>
+                <li>Mateo muestra el <strong>fruto</strong>, Pablo explica la <strong>raíz</strong></li>
+            </ul>
+
+            <h4>C. El juicio es según obras porque:</h4>
+            <ul>
+                <li>Las obras son la evidencia visible de realidad interior</li>
+                <li>No se puede ver el corazón, pero sí las acciones</li>
+                <li>Apocalipsis 20:12-13 - juzgados "según sus obras"</li>
+            </ul>
+
+            <h3>3. ESCATOLOGÍA: Naturaleza del Juicio Final</h3>
+
+            <h4>Características:</h4>
+            <ul>
+                <li><strong>Universal</strong> - "todas las naciones"</li>
+                <li><strong>Público</strong> - delante de todos</li>
+                <li><strong>Definitivo</strong> - sin apelación</li>
+                <li><strong>Basado en criterio revelado</strong> - no arbitrario</li>
+                <li><strong>Ejecutado por Cristo</strong> - no ángeles ni el Padre directamente</li>
+            </ul>
+
+            <h4>Timing:</h4>
+            <ul>
+                <li>"Cuando el Hijo del Hombre venga" (v. 31)</li>
+                <li>Después de la tribulación (Mateo 24)</li>
+                <li>Antes del reino eterno consumado</li>
+            </ul>
+
+            <h3>4. ÉTICA CRISTIANA: Misericordia Práctica</h3>
+
+            <p><strong>No es "evangelio social" sin conversión, SINO:</strong></p>
+            <ul>
+                <li>Fruto natural de nueva vida en Cristo</li>
+                <li>Amor que se hace visible y tangible</li>
+                <li>Servicio a Cristo a través de servicio al prójimo</li>
+            </ul>
+
+            <h4>Balance:</h4>
+            <ul>
+                <li><strong>NO:</strong> "Solo predica, ignora necesidad física"</li>
+                <li><strong>NO:</strong> "Solo ayuda social, ignora necesidad espiritual"</li>
+                <li><strong>SÍ:</strong> Evangelio integral que transforma corazón Y produce obras</li>
+            </ul>
+
+            <h3>5. ECLESIOLOGÍA: Identificación de Cristo con su Iglesia</h3>
+            <ul>
+                <li>Cristo y sus discípulos son <strong>uno</strong></li>
+                <li>Tocar a la iglesia es tocar a Cristo</li>
+                <li>Perseguir cristianos es perseguir a Cristo (Hechos 9:4)</li>
+                <li>Servir a cristianos es servir a Cristo</li>
+            </ul>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="problemas">
+            <h2>V. PROBLEMAS TEOLÓGICOS Y RESPUESTAS</h2>
+
+            <h3>Problema 1: "¿Esto enseña salvación por obras?"</h3>
+            
+            <div class="info-box">
+                <h4>Respuesta:</h4>
+                <p>NO. El texto muestra:</p>
+                <ul>
+                    <li>El reino fue preparado "desde la fundación del mundo" (v. 34) = elección previa</li>
+                    <li>Son llamados "benditos <strong>de mi Padre</strong>" antes de mencionar obras = gracia</li>
+                    <li>Las obras son <strong>consecuencia</strong>, no causa</li>
+                    <li>Analogía: El fruto prueba que el árbol está vivo, pero no da vida al árbol</li>
+                </ul>
+            </div>
+
+            <h3>Problema 2: "¿Qué pasa con fe sola (sola fide)?"</h3>
+
+            <div class="info-box">
+                <h4>Respuesta:</h4>
+                <p>Armonía con Reforma:</p>
+                <ul>
+                    <li>La fe salvadora es <strong>fe que obra</strong> (fides quae per caritatem operatur - Gálatas 5:6)</li>
+                    <li>Lutero mismo: "Somos salvos por fe sola, pero la fe que salva nunca está sola"</li>
+                    <li>Este pasaje describe el <strong>juicio según obras</strong>, no el <strong>fundamento de justificación</strong></li>
+                    <li>Romanos 2:6-8 también habla de juicio según obras, pero Romanos 3-4 establece justificación por fe</li>
+                </ul>
+            </div>
+
+            <h3>Problema 3: "¿Entonces los no-cristianos que hacen caridad se salvan?"</h3>
+
+            <div class="warning-box">
+                <h4>Respuesta:</h4>
+                <p>NO, porque:</p>
+                <ul>
+                    <li>El contexto es <strong>discípulos</strong> que han encontrado a Cristo</li>
+                    <li>Las obras fluyen de <strong>relación con Cristo</strong> (v. 40 - "mis hermanos")</li>
+                    <li>Isaías 64:6 - "todas nuestras justicias como trapo de inmundicia" (sin Cristo)</li>
+                    <li>Juan 15:5 - "Separados de mí nada podéis hacer"</li>
+                    <li>Las obras sin fe no salvan, pero la fe verdadera produce obras</li>
+                </ul>
+            </div>
+
+            <h3>Problema 4: "¿Contradicción con 'por gracia sois salvos'?"</h3>
+
+            <div class="info-box">
+                <h4>Respuesta:</h4>
+                <p>Son dos lados de la misma moneda:</p>
+                <ul>
+                    <li><strong>Efesios 2:8</strong> - causa de salvación: gracia por fe</li>
+                    <li><strong>Mateo 25:40</strong> - evidencia de salvación: obras de amor</li>
+                    <li><strong>Santiago 2:17</strong> - conexión: fe sin obras está muerta</li>
+                    <li>No hay contradicción, hay complemento</li>
+                </ul>
+            </div>
+
+            <h3>Problema 5: "¿Qué pasa con cristianos que fallan en hacer estas obras?"</h3>
+
+            <div class="info-box">
+                <h4>Respuesta:</h4>
+                <ul>
+                    <li>Distinción entre <strong>falla ocasional</strong> (pecado en creyente genuino) y <strong>patrón de vida</strong> (ausencia total de fruto)</li>
+                    <li>1 Juan 3:17-18 - cerrar corazón sistemáticamente cuestiona la salvación</li>
+                    <li>Pero 1 Juan 1:8-9 - el creyente genuino confiesa y busca perdón</li>
+                    <li>La pregunta no es "¿eres perfecto?" sino "¿hay fruto real aunque imperfecto?"</li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="aplicaciones">
+            <h2>VI. APLICACIONES PRÁCTICAS</h2>
+
+            <h3>1. Para el creyente:</h3>
+            <ul>
+                <li><strong>Examen de vida:</strong> ¿Hay evidencia visible de mi fe?</li>
+                <li><strong>Motivación:</strong> Servir a otros es servir a Cristo mismo</li>
+                <li><strong>Seguridad:</strong> Las obras no te salvan, pero confirman tu salvación</li>
+                <li><strong>Humildad:</strong> Aun las buenas obras son por gracia (Filipenses 2:13)</li>
+            </ul>
+
+            <h3>2. Para la iglesia:</h3>
+            <ul>
+                <li><strong>Misión integral:</strong> Predicar evangelio Y servir necesidades</li>
+                <li><strong>Cuidado mutuo:</strong> Especialmente de hermanos perseguidos</li>
+                <li><strong>Testimonio al mundo:</strong> Obras de amor validan mensaje</li>
+                <li><strong>Diaconía:</strong> Ministerio de misericordia es central, no periférico</li>
+            </ul>
+
+            <h3>3. Para el no-creyente:</h3>
+            <ul>
+                <li><strong>Advertencia solemne:</strong> El juicio es real y eterno</li>
+                <li><strong>Criterio claro:</strong> Dios no es arbitrario; reveló el estándar</li>
+                <li><strong>Urgencia:</strong> Prepararse ahora, no habrá segunda oportunidad</li>
+                <li><strong>Esperanza:</strong> Aún hay tiempo para arrepentimiento y fe</li>
+            </ul>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="sintesis">
+            <h2>VII. SÍNTESIS TEOLÓGICA FINAL</h2>
+
+            <div class="conclusion">
+                <h3>MENSAJE CENTRAL:</h3>
+                <p>Cuando Cristo regrese en gloria para juzgar, separará a toda la humanidad basándose en la evidencia visible de fe genuina: obras de misericordia hacia sus discípulos. Estas obras no causan salvación (que viene por gracia desde la fundación del mundo), pero son la prueba irrefutable de vida regenerada. La ausencia total de tales obras demuestra ausencia de fe salvadora. El destino es eterno e irreversible: vida eterna para quienes tienen fe que obra en amor, castigo eterno para quienes profesan conocer a Dios pero lo niegan con sus vidas.</p>
+
+                <h3>PUNTO CLAVE PARA LLEVAR:</h3>
+                <p>No puedes decir "conozco a Cristo" si sistemáticamente ignoras a los necesitados que Él ama. Tu trato hacia "los más pequeños" revela tu verdadera actitud hacia el Rey. La fe salvadora <strong>siempre</strong> produce fruto de amor tangible.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Blog Cristocentrico | Exégesis Profunda hecha por Claude (Sonnet 4.5) de Anthropic</p>
+    </footer>
+</div>
+</body>
+</html>
+               
+
+
