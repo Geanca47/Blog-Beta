@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- Meta esenciales -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Las últimas profecías de Balaam | Blog teológico</title>
+  <meta name="description" content="Página de estudio sobre las últimas profecías de Balaam (Números 23–24), con estructura clara y diseño en Bootstrap.">
+
+  <!-- Bootstrap CSS (CDN) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7Rxnatzr9gqQ1Z3zY6r5v5b8zQpYhUjvM0y4vJQXKfE"
+    crossorigin="anonymous"
+  >
+
+  <!-- Estilos personalizados -->
+  <style>
+    :root {
+      /* “Letras sangre” en tono rojo oscuro */
+      --blood: #8B0000;        /* DarkRed: fuerte, legible sobre blanco */
+      --blood-aux: #B22222;    /* FireBrick: para acentos y enlaces */
+      --neutral: #222;
+      --muted: #666;
+      --bg: #ffffff;
+    }
+
+    html, body {
+      background-color: var(--bg);
+      color: var(--blood);
+      scroll-behavior: smooth;
+    }
+
+    /* Tipografía y legibilidad */
+    body {
+      font-family: "Libre Baskerville", Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    /* Navegación */
+    .navbar {
+      border-bottom: 1px solid rgba(139, 0, 0, 0.2);
+      background-color: #fff;
+    }
+    .navbar .nav-link {
+      color: var(--blood-aux) !important;
+      font-weight: 600;
+    }
+    .navbar .nav-link.active {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 6rem 0 3rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 0.5px;
+    }
+    .hero p.lead {
+      color: var(--blood);
+      opacity: 0.9;
+    }
+
+    /* Secciones */
+    section {
+      padding: 3rem 0;
+      border-top: 1px solid rgba(139, 0, 0, 0.12);
+    }
+    h2, h3, h4 {
+      color: var(--blood);
+    }
+
+    /* Tarjetas con borde rojo oscuro */
+    .card {
+      border: 1px solid rgba(139, 0, 0, 0.25);
+      background-color: #fff;
+    }
+    .card-title {
+      color: var(--blood);
+      font-weight: 700;
+    }
+    .card p {
+      color: var(--blood);
+    }
+
+    /* Bloques de cita */
+    blockquote {
+      border-left: 4px solid var(--blood);
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+      color: var(--blood);
+      font-style: italic;
+      background: rgba(139, 0, 0, 0.04);
+    }
+
+    /* Enlaces */
+    a {
+      color: var(--blood-aux);
+      text-decoration-thickness: 1.5px;
+    }
+    a:hover, a:focus {
+      color: var(--blood);
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      padding: 2.5rem 0;
+      border-top: 1px solid rgba(139, 0, 0, 0.2);
+      color: var(--blood);
+    }
+
+    /* Accesibilidad de contraste para elementos secundarios */
+    .text-muted-blood {
+      color: var(--blood);
+      opacity: 0.75;
+    }
+
+    /* Botón en estilo outline sangre */
+    .btn-blood {
+      color: var(--blood);
+      border: 1.5px solid var(--blood);
+      background: transparent;
+      font-weight: 700;
+    }
+    .btn-blood:hover, .btn-blood:focus {
+      color: #fff;
+      background: var(--blood);
+      border-color: var(--blood);
+    }
+
+    /* Tabla con estilo sutil */
+    table {
+      border-color: rgba(139, 0, 0, 0.25);
+    }
+    thead th {
+      color: var(--blood);
+      border-bottom: 2px solid rgba(139, 0, 0, 0.4);
+    }
+    tbody td {
+      color: var(--blood);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#" style="color: var(--blood);">
+        Profecías de Balaam
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#introduccion">Introducción</a></li>
+          <li class="nav-item"><a class="nav-link" href="#oraculos">Oráculos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#simbolos">Símbolos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#aplicaciones">Aplicaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#recursos">Recursos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h1 class="fw-bold">Las últimas profecías de Balaam (Números 23–24)</h1>
+          <p class="lead mt-3">
+            Un recorrido teológico y visual por las bendiciones que Balaam pronunció sobre Israel,
+            culminando en la visión de la estrella y el cetro.
+          </p>
+          <div class="d-flex gap-2 mt-4">
+            <a href="#oraculos" class="btn btn-blood">Ver los cuatro oráculos</a>
+            <a href="#simbolos" class="btn btn-outline-danger">Significado de la estrella y el cetro</a>
+          </div>
+          <p class="mt-3 text-muted-blood">
+            Contexto: llanuras de Moab, tensión entre el poder político de Balac y la soberanía divina que guía a Balaam.
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title">Verso clave</h3>
+              <blockquote class="mb-0">
+                “Lo veo, pero no ahora; lo contemplo, pero no cerca: de Jacob surge una estrella,
+                de Israel se levanta un cetro.” — Números 24:17
+              </blockquote>
+              <p class="mt-3 text-muted-blood">La imagen combina esperanza futura, realeza y victoria.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Introducción -->
+  <section id="introduccion" aria-labelledby="intro-title">
+    <div class="container">
+      <h2 id="intro-title" class="fw-bold mb-3">Introducción y contexto</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <p>
+            Balaam, adivino extranjero convocado por Balac, pretende maldecir a Israel. Sin embargo, solo
+            pronuncia aquello que Dios pone en su boca, convirtiendo la intención de maldición en bendición.
+          </p>
+          <p>
+            El relato subraya la elección de Israel, la fidelidad divina y el límite de los poderes humanos frente
+            a la palabra irrevocable de Dios.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">Estructura del relato</h3>
+              <ul class="mb-0">
+                <li><strong>Encuentro y tensión:</strong> Balac contrata a Balaam (Núm. 22).</li>
+                <li><strong>Cuatro oráculos:</strong> Bendiciones y visión final (Núm. 23–24).</li>
+                <li><strong>Tema dominante:</strong> Soberanía de Dios frente a la manipulación.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Oráculos -->
+  <section id="oraculos" aria-labelledby="oraculos-title">
+    <div class="container">
+      <h2 id="oraculos-title" class="fw-bold mb-4">Los cuatro oráculos de Balaam</h2>
+      <div class="row g-4">
+        <!-- Oráculo 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">1. Pueblo aparte (23:7–10)</h4>
+              <p><strong>Enfoque:</strong> Israel como pueblo incontable y bendito.</p>
+              <p><strong>Claves:</strong> Distinción, multiplicación, identidad santa.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Oráculo 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">2. Fidelidad divina (23:18–24)</h4>
+              <p><strong>Enfoque:</strong> Dios no miente ni se arrepiente; su bendición permanece.</p>
+              <p><strong>Claves:</strong> Inmutabilidad, verdad, protección.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Oráculo 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">3. Florecimiento y fuerza (24:3–9)</h4>
+              <p><strong>Enfoque:</strong> Jardines, cedros; la fuerza del león.</p>
+              <p><strong>Claves:</strong> Vitalidad, estabilidad, victoria.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Oráculo 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">4. Estrella y cetro (24:15–24)</h4>
+              <p><strong>Enfoque:</strong> Visión futura: un rey se levanta, derrota a los enemigos.</p>
+              <p><strong>Claves:</strong> Esperanza mesiánica, realeza, justicia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <blockquote>
+          “¡Cuán hermosas son tus tiendas, oh Jacob, tus moradas, oh Israel!” (24:5) — lenguaje poético de florecimiento.
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Símbolos -->
+  <section id="simbolos" aria-labelledby="simbolos-title">
+    <div class="container">
+      <h2 id="simbolos-title" class="fw-bold mb-3">Símbolos clave: estrella y cetro</h2>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">La estrella de Jacob</h3>
+              <p><strong>Significado:</strong> Luz que guía, esperanza futura, irrupción de un líder legítimo.</p>
+              <p><strong>Enlace bíblico:</strong> Conexiones tradicionales con la realeza davídica y la esperanza mesiánica.</p>
+              <p class="text-muted-blood"><strong>Uso en arte:</strong> Motivo visual para epifanía, guía y victoria de la luz.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h3 class="card-title">El cetro de Israel</h3>
+              <p><strong>Significado:</strong> Autoridad, justicia, gobierno que protege y corrige.</p>
+              <p><strong>Enlace bíblico:</strong> Imagen recurrente de realeza legítima y dominio sobre enemigos hostiles.</p>
+              <p class="text-muted-blood"><strong>Uso en arte:</strong> Realeza, firmeza moral, victoria sobre el caos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabla breve de símbolos -->
+      <div class="table-responsive mt-4">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Símbolo</th>
+              <th>Idea central</th>
+              <th>Aplicación teológica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Estrella</td>
+              <td>Luz y guía</td>
+              <td>Esperanza escatológica y revelación</td>
+            </tr>
+            <tr>
+              <td>Cetro</td>
+              <td>Autoridad justa</td>
+              <td>Gobierno legítimo y protección</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aplicaciones -->
+  <section id="aplicaciones" aria-labelledby="aplicaciones-title">
+    <div class="container">
+      <h2 id="aplicaciones-title" class="fw-bold mb-3">Aplicaciones y notas pastorales</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Espiritualidad</h4>
+              <p><strong>Luz en la oscuridad:</strong> Dios convierte intentos de maldición en bendición.</p>
+              <p><strong>Confianza:</strong> La fidelidad divina sostiene el camino del pueblo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Educación bíblica</h4>
+              <p><strong>Lectura narrativa:</strong> Identificar estructura, voces y tensión.</p>
+              <p><strong>Teología:</strong> Soberanía de Dios y esperanza futura articulada en símbolos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Arte y liturgia</h4>
+              <p><strong>Motivos:</strong> Estrella y cetro para narrativas visuales respetuosas.</p>
+              <p><strong>Estilo:</strong> Desde épico hasta infantil, cuidando claridad y doctrina.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert alert-light mt-4 border" role="alert" style="border-color: rgba(139,0,0,0.25);">
+        <strong>Nota:</strong> Esta página es un recurso de estudio y contemplación. Para trabajo pastoral o doctrinal específico,
+        adapta el lenguaje a tu audiencia y tradición eclesial concreta.
+      </div>
+    </div>
+  </section>
+
+  <!-- Recursos -->
+  <section id="recursos" aria-labelledby="recursos-title">
+    <div class="container">
+      <h2 id="recursos-title" class="fw-bold mb-3">Recursos y referencias de lectura</h2>
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <p>
+            Sugerencias de lectura: Números 22–24 (texto bíblico), estudios sobre literatura profética,
+            y comentarios que exploren la relación entre símbolo y narrativa en la teología del Antiguo Testamento.
+          </p>
+          <ul>
+            <li><strong>Texto bíblico:</strong> Números 23–24, enfocar el verso 24:17.</li>
+            <li><strong>Contexto narrativo:</strong> Tensión con Balac y el papel de la bendición.</li>
+            <li><strong>Puentes:</strong> Realeza davídica y esperanza futura en la tradición cristiana.</li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h4 class="card-title">Descarga y uso</h4>
+              <p class="mb-3">Puedes copiar este archivo HTML tal cual y subirlo a tu blog.</p>
+              <a class="btn btn-blood w-100" href="#top">Copiar HTML</a>
+              <p class="mt-3 text-muted-blood">Incluye Bootstrap desde CDN y estilos propios para “letras sangre”.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-md-8">
+          <p class="mb-0">
+            © <span id="year"></span> Blog Teológico — Las últimas profecías de Balaam.
+            Diseño con fondo blanco y tipografía en tono sangre.
+          </p>
+        </div>
+        <div class="col-md-4 text-md-end">
+          <a href="#introduccion" class="me-3">Volver al inicio</a>
+          <a href="#recursos">Recursos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (CDN) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO2Bz3j1QZrQ4qzYx2ZC2lYwQnE8dP1rjVQFjGJp3x"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Script mínimo -->
+  <script>
+    // Año dinámico en el footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
