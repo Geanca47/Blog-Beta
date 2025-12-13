@@ -55,15 +55,13 @@
     }
     
     /* ESTILOS DE IMÁGENES */
-    .card-img-top, .small-card-img {
-      width: 100%;
-      object-fit: contain;
-      background: #fff;
-      border-radius: 10px;
-    }
-
-    .card-img-top { height: 350px; }
-    .small-card-img { height: 200px; }
+.card-img-top {
+  width: 100%;
+  
+  object-fit: cover;
+  background: #fff;
+  border-radius: 10px;
+}
     
     /* BOTONES Y PIE DE PÁGINA */
     .btn-primary { 
@@ -97,15 +95,11 @@
 
     /* MEDIA QUERY */
     @media (max-width: 768px) {
-      .alert {
-        width: 100% !important;
-        height: auto !important;
-        padding: 30px 10px !important;
-      }
-      .card-img-top {
-        height: auto !important;
-      }
-    } 
+  .card-img-top {
+    height: 220px;
+  }
+}
+
   </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-54MPYY33GH"></script>
