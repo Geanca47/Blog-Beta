@@ -3,404 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Blog Cristiano sobre escatología, ángeles, misterios bíblicos y teología. Reflexiones profundas desde una cosmovisión cristiana. By Geanca & TARS.">
-  <meta name="keywords" content="Blog cristiano, teología, escatología, ángeles, Biblia, misterios, fe, Apocalipsis, Génesis">
-  <meta name="author" content="Geanca">
-  <meta property="og:title" content="Blog Cristiano - Misterios Bíblicos">
-  <meta property="og:description" content="Explorando escatología, ángeles como Ophanim/Ophanim, Misterio de la Piedad e Iniquidad desde una mirada cristiana.">
-  <meta property="og:image" content="assets/pics/caballo.png">
-  <meta property="og:type" content="website">
   <title>Blog Cristiano</title>
-  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="icon" href="assets/favicon/biblia.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="assets/favicon/biblia.png">
 
   <style>
-    /* --- ESTILOS GENERALES --- */
-    html { scroll-behavior: smooth; }
-    body { 
-        background-color: #fff; 
-        font-family: 'Georgia', serif; 
-        padding-top: 76px;
-    }
+    body { background-color: #fff; font-family: 'Georgia', serif; padding-top: 80px; }
+    .navbar-custom { background-color: #c00; }
     
-    /* --- ESTILOS DEL MENÚ (NAVBAR) --- */
-    .navbar-custom {
-        background-color: #c00; 
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-    }
-    .navbar-brand {
-        font-weight: bold;
-        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        font-size: 1.5rem;
-        letter-spacing: 1px;
-    }
-    .nav-link {
-        font-weight: 500;
-        margin-right: 15px;
-        transition: all 0.3s ease;
-    }
-    .nav-link:hover { color: #ffcccc !important; }
-
-    /* --- ESTILOS DE CARDS E IMÁGENES --- */
+    /* --- EL SECRETO PROFESIONAL: CONTENEDORES UNIFORMES --- */
     
-    .card-title { 
-        color: #c00; 
-        font-weight: bold; 
+    /* 1. Definimos un contenedor con altura fija para todas las imágenes */
+    .img-container-main {
+        width: 100%;
+        height: 300px; /* Altura uniforme para artículos */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff; /* Fondo limpio */
+        overflow: hidden;
     }
 
-    .card { border: none !important; }
-
-
-    /* 1. IMÁGENES PRINCIPALES (Misterios, Génesis, etc.) */
-    /* Se ven completas, fondo blanco, tamaño uniforme */
-    .card-img-main {
+    .img-container-source {
         width: 100%;
-        height: 400px; /* Altura generosa para Desktop */
-        object-fit: contain; /* Muestra la imagen entera sin recortar */
-        background-color: #fff; /* Fondo blanco pedido */
-        border-radius: 12px 12px 0 0;
-        padding: 8px; /* Un pequeño margen interno */
-    }
-
-    /* 2. IMÁGENES DE FUENTES */
-    /* Más grandes que antes */
-    .card-img-source {
-        width: 100%;
-        height: 180px; /* Aumentado de tamaño */
-        object-fit: contain; 
-        padding: 10px;
+        height: 180px; /* Altura uniforme para logos de fuentes */
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: #fff;
-        border-radius: 10px 10px 0 0;
+        padding: 20px;
+    }
+
+    /* 2. La imagen se adapta al contenedor SIN cortarse */
+    .img-fit {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain; /* Garantiza que NO se corte nada */
+    }
+
+    /* 3. Pegamos el texto a la imagen eliminando espacios del card-body */
+    .card { border: 1px solid #eee; height: 100%; }
+    .card-body { 
+        padding-top: 10px; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
     }
     
-    /* BOTONES Y PIE DE PÁGINA */
-    .btn-primary { 
-        background-color: #c00; 
-        border-color: #900; 
-    }
-    .btn-primary:hover {
-        background-color: #900;
-        border-color: #600;
-    }
-
-    .footer { 
-        margin-top: 3rem; 
-        font-weight: bold; 
-        color: #444; 
-        font-size: 16px; 
-        padding: 18px 0; 
-        background-color: #f3f3f3; 
-    }
-    .explicacion { 
-        margin-top: 2rem; 
-        font-size: 18px; 
-    }
-    .section-title { 
-        color: #c00; 
-        font-weight: bold; 
-        margin-top: 40px; 
-        margin-bottom: 20px; 
-        text-align: center; 
-    }
-
-    /* --- MEDIA QUERY (CELULAR) --- */
-    @media (max-width: 768px) {
-        /* Ajuste para pantallas pequeñas */
-        .card-img-main {
-            height: 300px; 
-        }
-        .card-img-source {
-            height: 160px; /* Buen tamaño en celular */
-        }
-    }
+    .card-title { color: #c00; font-weight: bold; font-size: 1.1rem; }
+    .btn-primary { background-color: #c00; border: none; }
+    .section-title { color: #c00; font-weight: bold; text-align: center; margin: 40px 0; }
   </style>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-54MPYY33GH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-54MPYY33GH');
-  </script>
-
 </head>
-
-
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-    <i class="bi bi-book-half"></i> ​Blog Cristiano 
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="menuNavegacion">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#introduccion">Introducción</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            Misterios
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#seccion-piedad">Misterio de la Piedad</a></li>
-            <li><a class="dropdown-item" href="#seccion-iniquidad">Misterio de la Iniquidad</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#fuentes">Fuentes</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <div class="container"><a class="navbar-brand" href="#">Blog Cristiano</a></div>
 </nav>
 
-<div class="container-xl mt-4">
+<div class="container-xl">
 
-    <div class="text-center mb-4">
-        <h5 style="color:#c00; font-weight:bold; margin-top:20px;">
-            “Cuando el Hijo del Hombre venga en su gloria, y todos los ángeles con él, entonces se sentará en su trono de gloria” <br> – Mateo 25:31-46 – <br> RVR1960
-        </h5>
-        <a href="Mateo25Claude.html" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-2">Analisis Escatologico </a> 
-    </div>
-
-  <div class="row mb-4">
-    <div class="col-12">
-      <div class="card h-100 shadow-sm">
-        <img src="assets/pics/OurKing.png" class="card-img-main" alt="Misterio de la Cruz" onerror="this.src='https://placehold.co/800x350/EEE/c00?text=El+Rey+Jesucristo'">
-        <h6 class="card-title text-center mt-2 p-2">
-          ישוע הנצרי מלך היהודים <br> 
-          IESVS NAZARENVS REX IVDAEORVM (INRI) <br> 
-          ἸΗΣΟῪΣ Ὁ ΝΑΖΩΡΑΊΟΣ Ὁ ΒΑΣΙΛΕῪΣ ΤΩΝ ἸΟΥΔΑΊΩΝ (INBI)
-        </h6>
-      </div>
-    </div>
-  </div>    
-
-  <div class="row">
-    <div class="col-md-6 mb-3">
-        <div class="alert alert-warning text-center mb-3 shadow-sm"
-             style="width:100%; display:flex; align-items:center; justify-content:center;
-             border-radius:12px; overflow:hidden; font-size:18px; padding: 20px;">
-          <div>
-            ⚠️🎬🙏 Recomendamos ver la <strong>Película</strong> para el <strong>Análisis Conversacional</strong><br>
-            del Misterio de la Piedad aplicado a Thomasin para posteriormente ir al <strong>Analisis Escatologico</strong>
-            <br><br>
-            <a href="https://ok.ru/group/70000006188245/topic/157377820219605"
-               target="_blank" rel="noopener noreferrer" style="color:#c00;">
-              <strong>The VVitch (2015)</strong><br>
-              Director: Robert Eggers<br>
-              País: USA, UK, Canadá
-            </a>
-          </div>
-        </div> 
-
-        <div class="card shadow-sm h-100" id="seccion-piedad">
-          <img src="assets/pics/the truth.png" class="card-img-main"
-               alt="Misterio de la Piedad" onerror="this.src='https://placehold.co/600x350/EEE/c00?text=Misterio+Piedad'">
-          <div class="card-body text-center">
-            <h6 class="card-title">Thomasin es Redimida a través del Misterio de La Piedad<br>(1 Timoteo 3:16)</h6>
-            <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-2">Analisis Escatologico en Pausa...</a>
-          </div>
+  <div class="row mb-4 justify-content-center">
+    <div class="col-md-10">
+      <div class="card shadow-sm">
+        <div class="img-container-main">
+            <img src="assets/pics/OurKing.png" class="img-fit" alt="Rey Jesús">
         </div>
-    </div>
-
-    <div class="col-md-6 mb-3">
-        <div class="card shadow-sm h-100" id="seccion-iniquidad">
-          <img src="assets/pics/Jardin-Eva.png" class="card-img-main"
-               alt="Misterio de la Iniquidad" onerror="this.src='https://placehold.co/600x350/EEE/c00?text=Misterio+Iniquidad'">
-          <div class="card-body text-center">
-            <h6 class="card-title">Eva es atraida a través del Misterio de la Iniquidad<br>(2 Tesalonicenses 2:7)</h6>
-            <a href="" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-2">Analisis Escatologico en Pausa...</a>
-          </div>
-        </div>
-    </div>
-  </div>
-
-  <div class="row mt-4">
-    <div class="col-md-6 mb-4">
-      <div class="card shadow-sm h-100">
-        <img src="assets/pics/Genesis-Gemini.png" class="card-img-main"
-          alt="Libro de Génesis - Portada" onerror="this.src='https://placehold.co/800x350/EEE/c00?text=Genesis'">
-        <div class="card-body text-center d-flex flex-column">
-          <h5 class="card-title" style="color:#c00; font-weight:bold;">
-            Génesis — El Primer Libro de Moisés
-          </h5>
-          <p class="card-text">Exégesis Teológica del Génesis</p>
-          <div class="mt-auto">
-            <a href="genesis.html" class="btn btn-primary">Ir al Estudio del Génesis</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6 mb-4">
-      <div class="card h-100 shadow">
-        <img src="assets/pics/Gemini_Genesis2.png" class="card-img-main"
-          alt="Teoría del GAP en Génesis" onerror="this.src='https://placehold.co/800x350/EEE/c00?text=Teoria+GAP'">
-        <div class="card-body d-flex flex-column text-center">
-          <h5 class="card-title" style="color:#c00; font-weight:bold;">
-            La Teoría del GAP
-          </h5>
-          <p class="card-text">
-            Análisis Exegético-Teológico-Hermenéutico-Apologético de Génesis 1:1–1:2
-          </p>
-          <div class="mt-auto">
-            <a href="gap.html" class="btn btn-danger">Ver análisis del GAP</a>
-          </div>
+        <div class="card-body">
+            <h6 class="card-title">ישוע הנצרי מלך היהודים (INRI)</h6>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container" id="introduccion">
-    <h2 style="text-align: center;color: #c00; margin-top: 40px;">Introducción</h2>
-    
-    <div style="font-size: 1.1em; line-height: 1.6; color: #333;">
-      <p>
-        Antes de que el pecado entrara en el mundo, existía un ser glorioso, sabio y hermoso: <strong>Lucifer</strong>. Creado por <strong>Jesucristo</strong>,
-        habitaba en el Edén celestial, en el Monte de Dios, rodeado por ángeles y con acceso al santuario celestial,
-        donde se manifestaba la presencia de Dios.
-      </p>
-      
-      <p>
-        Lucifer ocupaba el puesto de querubín cubridor, posición de honor junto al Arca del Pacto celestial,
-        donde reposaba la gloria de Dios y dentro del cual se encontraba la ley divina.
-      </p>
-
-      <div style="background-color: #f9f9f9; border-left: 5px solid #c00; padding: 15px; margin: 20px 0; border-radius: 0 10px 10px 0;">
-        <strong>Elena G. de White, <em>Patriarcas y Profetas</em>, Capítulo 3:</strong><br>
-        "Tú, querubín grande, cubridor, estuviste en el Edén, en el huerto de Dios, rodeado de piedras preciosas..."
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="img-container-main">
+            <img src="assets/pics/the truth.png" class="img-fit" alt="Thomasin">
+        </div>
+        <div class="card-body">
+          <h6 class="card-title">Thomasin es Redimida (1 Timoteo 3:16)</h6>
+          <a href="#" class="btn btn-primary btn-sm mt-2">Analisis en Pausa...</a>
+        </div>
       </div>
-
-      <div style="background-color: #f9f9f9; border-left: 5px solid #c00; padding: 15px; margin: 20px 0; border-radius: 0 10px 10px 0;">
-        <strong>Esteban Bohr, <em>Descubriendo los Secretos del Génesis</em>, Sermón 2:</strong><br>
-        "Lucifer fue creado perfecto, lleno de sabiduría y esplendor, y tenía acceso al Santuario celestial donde Dios manifestaba Su presencia."
+    </div>
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="img-container-main">
+            <img src="assets/pics/Jardin-Eva.png" class="img-fit" alt="Eva">
+        </div>
+        <div class="card-body">
+          <h6 class="card-title">Eva e Iniquidad (2 Tesalonicenses 2:7)</h6>
+          <a href="#" class="btn btn-primary btn-sm mt-2">Analisis en Pausa...</a>
+        </div>
       </div>
-
-      <h6 style="color: #c00; margin-top: 20px; font-weight: bold;">La transgresión y el origen del pecado:</h6>
-      <p>
-        Aunque criado en santidad y belleza, <strong>Lucifer eligió pecar</strong>: su orgullo lo llevó a centrarse en sí mismo y a calumniar a Dios
-        con el propósito de ganarse ángeles para su causa.
-      </p>
-      <p>
-        <em>"El pecado de Lucifer no fue accidental, sino una elección deliberada de rebelarse contra la ley de Dios."</em>
-      </p>
-      <h6 style="color: #c00; margin-top: 20px;">La ley como expresión de amor:</h6>
-      <p>
-        Los Diez Mandamientos salvaguardan las relaciones humanas y la relación con Dios.
-        Cuando el egoísmo domina, como ocurrió con Lucifer, el amor desaparece y la armonía se quiebra.
-      </p>
-
-      <h6 style="color: #c00; margin-top: 20px;">Aplicación práctica y esperanza:</h6>
-      <p>
-        El pecado tiene consecuencias destructivas, pero <strong>la gracia de Dios en Cristo permite vencerlo</strong>.
-        La Ley puede ser escrita en el corazón humano, produciendo relaciones armoniosas como Dios quiso desde el inicio.
-      </p>
-
-      <h6 style="color: #c00; margin-top: 20px;">Conclusión:</h6>
-      <p>
-        El orgullo y el egoísmo son la raíz del pecado. Lucifer y David muestran cómo quebrantar la Ley de Dios destruye relaciones
-        y aparta de Su presencia. La Ley es amor, y obedecerla implica poner a Dios y al prójimo en primer lugar.
-        Solo en Cristo podemos restaurar la armonía perdida. <strong>¡Amén!</strong>
-      </p>  
     </div>
   </div>
 
-  <div class="text-center mt-5 mb-3">
-    <h2 style="color:#c00; font-weight:bold;">Analisis Conversacional</h2>
-  </div>
-
-  <div class="explicacion text-center p-4">
-    <div id="continuacion-thomasin" class="explicacion text-center mt-4">
-      <pre style="background:#f8f9fa; padding:15px; border-radius:10px; white-space: pre-wrap; text-align: left; max-width: 800px; margin: 0 auto; border: 1px solid #ddd;">
-<span style="color:#c00; font-weight:bold;">Dijiste:</span>
-bro una consulta que tengo o mas bien una duda sobre Thomasin: o sea si ella tenia un corazon bueno y era devota y buena persona y nunca quiso ser bruja entonces cual era la salida...
-
-<span style="color:#00a; font-weight:bold;">ChatGPT dijo:</span>
-Bro… esta es una de las preguntas más profundas que se le pueden hacer a The Witch (2015)...
-...Su única salida era convertirse en mártir, no en bruja.
-      </pre>
-    </div>  
-    <a href="Geanca-TARS.html" class="btn btn-primary mt-2">Continua la conversacion aqui... </a>
-  </div>
-
-
-  <div class="container-xl mt-5" id="fuentes">
-    <h2 class="section-title">Fuentes y Créditos</h2>
-    <div class="row g-4 mt-3 text-center">
-        
-        <div class="col-12 col-md-3">       
-          <div class="card h-100 p-3 shadow-sm hover-effect">
-            <img src="assets/pics/Holly-Bible.png" class="card-img-source" alt="Fuentes Cristianas" onerror="this.src='https://placehold.co/200x200/EEE/333?text=Biblia'">
-            <div class="card-body">
-              <h5 class="card-title">Fuentes Cristianas</h5>
-              <p>🕎 <b>ELOHIM</b> ✝️</p>
-              <p>📖 Biblia Reina Valera 1960</p>
-              <p>📖 Elena G de White</p>
-              <p>📖 Esteban Bohr</p>
-              <p>🫂 Agradecimiento a mi familia y a Marco Mora.</p>            
-            </div>
-          </div>
+  <div class="row mt-2 g-4">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="img-container-main">
+            <img src="assets/pics/Genesis-Gemini.png" class="img-fit" alt="Génesis">
         </div>
-
-        <div class="col-12 col-md-3">       
-          <div class="card h-100 p-3 shadow-sm">
-            <img src="assets/pics/IA.png" class="card-img-source" alt="Fuentes Tecnológicas" onerror="this.src='https://placehold.co/200x200/EEE/333?text=IA'">
-            <div class="card-body">
-              <h5 class="card-title">Inteligencia Artificial</h5>
-              <p>🤖 T.A.R.S (GPT-5.1)</p>
-              <p>🤖 Claude (Anthropic)</p>
-              <p>🤖 Copilot & Gemini</p>
-              <p>Git, GitHub Pages</p>
-            </div> 
-          </div>
+        <div class="card-body">
+          <h5 class="card-title">Génesis — El Primer Libro</h5>
+          <a href="genesis.html" class="btn btn-primary btn-sm">Ir al Estudio</a>
         </div>
-
-        <div class="col-12 col-md-3">       
-          <div class="card h-100 p-3 shadow-sm">
-            <img src="assets/pics/angels.png" class="card-img-source" alt="Fuentes Musicales" onerror="this.src='https://placehold.co/200x200/EEE/333?text=Musica'">
-            <div class="card-body">
-              <h5 class="card-title">Fuentes Musicales</h5>
-              <p>🎵 Marcos Vidal</p>
-              <p>🎵 Jesús Adrián Romero</p>
-              <p>🎵 Oscar Medina</p>
-              <p>🎵 Peregrinos y Extranjeros</p>
-            </div>
-          </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="img-container-main">
+            <img src="assets/pics/Gemini_Genesis2.png" class="img-fit" alt="GAP">
         </div>
-
-        <div class="col-12 col-md-3">       
-          <div class="card h-100 p-3 shadow-sm">
-            <img src="assets/pics/CEA.png" class="card-img-source" alt="Fuentes Académicas" onerror="this.src='https://placehold.co/200x200/EEE/333?text=Academia'">
-            <div class="card-body">
-              <h5 class="card-title">Fuentes Académicas</h5>
-              <p>🎓 Colegio Bilingüe Adventista</p> 
-              <p>🎓 Universidad Latina (ISI)</p>
-              <p>🎓 John Hopkins University</p>
-            </div>
-          </div>
+        <div class="card-body">
+          <h5 class="card-title">La Teoría del GAP</h5>
+          <a href="gap.html" class="btn btn-danger btn-sm">Ver Análisis</a>
         </div>
+      </div>
     </div>
   </div>
 
-  <div class="text-center py-3 mt-5" style="background-color: lightgrey; font-style:italic; color: black;">
-    <strong>Blog creado y actualizado por: 
-    T.A.R.S.&trade; (ChatGPT-5.1) y Geanca&trade;  <br>  
-    Ultima actualizacion: Sat Dec 13 2025 at 01:31  <br> Email Contact: geanca@gmail.com </strong>
+  <h2 class="section-title" id="fuentes">Fuentes y Créditos</h2>
+  <div class="row row-cols-1 row-cols-md-4 g-4 mb-5">
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="img-container-source"><img src="assets/pics/Holly-Bible.png" class="img-fit"></div>
+        <div class="card-body"><h6>Cristianas</h6></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="img-container-source"><img src="assets/pics/IA.png" class="img-fit"></div>
+        <div class="card-body"><h6>IA</h6></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="img-container-source"><img src="assets/pics/angels.png" class="img-fit"></div>
+        <div class="card-body"><h6>Musicales</h6></div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card shadow-sm">
+        <div class="img-container-source"><img src="assets/pics/CEA.png" class="img-fit"></div>
+        <div class="card-body"><h6>Académicas</h6></div>
+      </div>
+    </div>
   </div>
 
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
