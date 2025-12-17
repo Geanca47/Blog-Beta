@@ -1,0 +1,163 @@
+/* --- ESTILOS GENERALES --- */
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #fff;
+  font-family: 'Georgia', serif;
+  padding-top: 76px;
+}
+
+/* --- NAVBAR --- */
+.navbar-custom {
+  background-color: #c00;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  font-weight: 500;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover { color: #ffcccc !important; }
+
+/* --- TITULOS Y SECCIONES --- */
+.section-title {
+  color: #c00;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* --- CARDS --- */
+.card {
+  border: none !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-title {
+  color: #c00;
+  font-weight: bold;
+}
+
+/* ✅ IMÁGENES PRINCIPALES (todas iguales, sin deformarse) */
+.card-img-main {
+  width: 100%;
+  height: auto;          /* ✅ Mantiene proporción natural */
+  max-height: 350px;     /* ✅ Todas tienen la misma altura máxima */
+  object-fit: contain;   /* ✅ No recorta nada */
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 12px 12px 0 0;
+}
+
+/* ✅ IMÁGENES DE FUENTES (iguales y proporcionadas) */
+.card-img-source {
+  width: 100%;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+
+/* --- BOTONES --- */
+.btn-primary {
+  background-color: #c00 !important;
+  border-color: #900 !important;
+}
+
+.btn-primary:hover {
+  background-color: #900 !important;
+  border-color: #600 !important;
+}
+
+/* --- ASIDE TEOLÓGICO --- */
+
+.theology-aside {
+  background: #fdfdfd;
+  border-left: 6px solid #c00;
+  padding: 1.5rem;
+  max-width: 100%;
+  color: #333;
+  font-family: 'Georgia', serif;
+  margin-top: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.theology-aside h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #c00;
+  font-weight: bold;
+}
+
+.theology-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  border: 1px solid #eee;
+}
+
+.theology-card img {
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+.theology-card h4 {
+  color: #c00;
+  font-weight: bold;
+}
+
+.theology-card p {
+  color: #444;
+}
+
+.theology-card a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  padding: 0.4rem 0.9rem;
+  background: #c00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.theology-card a:hover {
+  background: #900;
+}
+
+
+/* --- MEDIA QUERY (CELULAR) --- */
+@media (max-width: 768px) {
+
+  .card-img-main {
+    max-height: 300px;   /* ✅ Más compacto en celular */
+  }
+
+  .card-img-source {
+    max-height: 150px;
+  }
+
+  .theology-aside {
+    max-width: 100%;
+  }
+}
