@@ -1,0 +1,95 @@
+/* =====================================================
+   CSS STANDARD – PÁGINAS EXTERNAS
+   BLOG CRISTOLÓGICO · MEGA EXÉGESIS
+   ===================================================== */
+
+/* --- BASE GENERAL --- */
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.6;
+  margin: 40px;
+  background-color: #ffffff;
+  color: #222;
+}
+
+/* --- TEXTO PRE-FORMATEADO (DIÁLOGOS / EXÉGESIS) --- */
+pre {
+  font-family: inherit;
+  white-space: pre-wrap;
+}
+
+/* --- TÍTULOS GENERALES --- */
+h1 {
+  color: #d94123;
+  text-align: center;
+}
+
+h2 {
+  color: #800404;
+}
+
+/* =====================================================
+   HERO STANDARD (RECTÁNGULO ROJO 🔥)
+   OBLIGATORIO EN TODA PÁGINA EXTERNA
+   ===================================================== */
+
+.hero-escatologico {
+  background-color: #800404;
+  color: #ffffff;
+  padding: 60px 20px;
+  margin: -40px -40px 40px -40px; /* encaja perfecto con body margin */
+  text-align: center;
+}
+
+.hero-escatologico h1 {
+  color: #ffffff;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hero-escatologico p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin: 0;
+}
+
+/* --- SECCIONES DE CONTENIDO --- */
+section {
+  margin-bottom: 2.5rem;
+}
+
+/* --- CITAS TEOLÓGICAS / EGW / AUTORES --- */
+blockquote {
+  border-left: 5px solid #a00000;
+  padding-left: 15px;
+  margin: 20px 0;
+  font-style: italic;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+/* --- LISTAS --- */
+ul, ol {
+  margin-left: 30px;
+}
+
+/* --- ENLACES --- */
+a {
+  color: #a00000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* --- FOOTER SIMPLE (OPCIONAL) --- */
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+}
