@@ -177,36 +177,26 @@ body {
   display: block;
 }
 
-
-
-
-
 @media (max-width: 768px) {
 
   /* Imagen del Rey */
   .rey-img-box {
     height: 380px;
   }
-
 }
 
-/* === CONTENEDOR CONTROLADO DE PORTADAS === */
+/* === MINI CARDS BAJO EL REY === */
 
-.misterio-img-box {
-  height: 300px;          /* 🔥 ESTA ES LA CLAVE */
-  overflow: hidden;
-  background: #fff;
-  border-radius: 12px 12px 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.misterio-poster {
-  max-height: 100%;
+.misterio-mini {
   max-width: 100%;
-  object-fit: contain;
+  border-radius: 12px;
 }
 
+.misterio-img {
+  max-height: 220px;     /* 🔥 AQUÍ SE CONTROLA EL TAMAÑO */
+  object-fit: contain;
+  background: #fff;
+  padding: 10px;
+}
 
 
