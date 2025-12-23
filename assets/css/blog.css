@@ -49,29 +49,40 @@ body {
   font-weight: bold;
 }
 
-/* ✅ IMÁGENES PRINCIPALES (todas iguales, sin deformarse) */
-
-
-/* --- Imagen del Rey responsiva --- */
-.card-img-main.rey-img {
-  width: 100%;
-  height: auto;            /* Mantiene proporción */
-  max-height: 600px;       /* Escritorio */
-  object-fit: cover;       /* Llena el contenedor sin deformar */
-}
-
-
+/* --- IMÁGENES PRINCIPALES --- */
 .card-img-main {
   width: 100%;
-  height: auto;          /* ✅ Mantiene proporción natural */
-  max-height: 350px;     /* ✅ Todas tienen la misma altura máxima */
-  object-fit: contain;   /* ✅ No recorta nada */
+  height: auto;
+  max-height: 350px;  /* Altura general para otras imágenes */
+  object-fit: contain;
   background-color: #fff;
   padding: 8px;
   border-radius: 12px 12px 0 0;
 }
 
-/* ✅ IMÁGENES DE FUENTES (iguales y proporcionadas) */
+/* --- Imagen del Rey responsiva --- */
+.card-img-main.rey-img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;    /* Escritorio */
+  object-fit: cover;    /* Llena el contenedor sin deformar */
+}
+
+/* Ajuste tablet/móvil */
+@media (max-width: 768px) {
+  .card-img-main.rey-img {
+    max-height: 480px;   /* Más alta en tablet/móvil */
+  }
+}
+
+/* Ajuste celular pequeño */
+@media (max-width: 480px) {
+  .card-img-main.rey-img {
+    max-height: 420px;   /* Ajuste para celulares pequeños */
+  }
+}
+
+/* --- IMÁGENES DE FUENTES --- */
 .card-img-source {
   width: 100%;
   height: auto;
@@ -94,7 +105,6 @@ body {
 }
 
 /* --- ASIDE TEOLÓGICO --- */
-
 .theology-aside {
   background: #fdfdfd;
   border-left: 6px solid #c00;
@@ -156,39 +166,17 @@ body {
   background: #900;
 }
 
-
-/* --- MEDIA QUERY (CELULAR) --- */
-
-
-/* Ajustes móviles */
+/* --- MEDIA QUERY GENERAL (CELULAR) --- */
 @media (max-width: 768px) {
-  .card-img-main.rey-img {
-    max-height: 480px;     /* Más alta en tablet/móvil */
-  }
-}
-
-@media (max-width: 480px) {
-  .card-img-main.rey-img {
-    max-height: 420px;     /* Ajuste para celulares pequeños */
-  }
-}
-
-
-@media (max-width: 768px) {
-
-  .card-img-main {
-    max-height: 300px;   /* ✅ Más compacto en celular */
-  }
-
   .card-img-source {
     max-height: 150px;
   }
-
   .theology-aside {
     max-width: 100%;
   }
 }
 
+/* --- CONTENEDORES DE IMÁGENES --- */
 .img-box {
   width: 100%;
   height: 280px;
@@ -204,23 +192,9 @@ body {
   display: block;
 }
 
-
-
-
-
-@media (max-width: 768px) {
-
-  /* Imagen del Rey */
-  .rey-img-box {
-    height: 380px;
-  }
-
-}
-
-/* === CONTENEDOR CONTROLADO DE PORTADAS === */
-
+/* Contenedores de portadas de misterios */
 .misterio-img-box {
-  height: 300px;          /* 🔥 ESTA ES LA CLAVE */
+  height: 300px;
   overflow: hidden;
   background: #fff;
   border-radius: 12px 12px 0 0;
@@ -234,6 +208,3 @@ body {
   max-width: 100%;
   object-fit: contain;
 }
-
-
-
