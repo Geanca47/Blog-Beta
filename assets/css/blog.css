@@ -53,32 +53,56 @@ body {
 .card-img-main {
   width: 100%;
   height: auto;
-  max-height: 350px;  /* Altura general para otras imágenes */
+  max-height: 350px;
   object-fit: contain;
   background-color: #fff;
   padding: 8px;
   border-radius: 12px 12px 0 0;
 }
 
-/* --- Imagen del Rey responsiva --- */
-.card-img-main.rey-img {
+/* --- SOLUCIÓN PARA IMAGEN DEL REY (CORREGIDO) --- */
+.rey-img-box {
   width: 100%;
   height: auto;
-  max-height: 400px;    /* Escritorio */
-  object-fit: cover;    /* Llena el contenedor sin deformar */
+  max-height: 600px; /* Aumentamos el límite para que luzca */
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
 }
 
-/* Ajuste tablet/móvil */
+.card-img-main.rey-img {
+  width: 100%;
+  height: auto;         /* Mantiene proporción real */
+  max-height: 100%;
+  object-fit: contain;  /* ¡CAMBIO CLAVE! Evita que se corte la imagen */
+  object-position: center;
+  padding: 0;           /* Eliminamos el padding para máximo detalle */
+}
+
+/* --- Tablet --- */
 @media (max-width: 768px) {
-  .card-img-main.rey-img {
-    max-height: 520px;   /* Más alta en tablet/móvil */
+  .rey-img-box {
+    max-height: 450px;
+  }
+
+  .card-img-main {
+    max-height: 300px;
+  }
+
+  .card-img-source {
+    max-height: 150px;
+  }
+
+  .theology-aside {
+    max-width: 100%;
   }
 }
 
-/* Ajuste celular pequeño */
+/* --- Celular --- */
 @media (max-width: 480px) {
-  .card-img-main.rey-img {
-    max-height: 550px;   /* Ajuste para celulares pequeños */
+  .rey-img-box {
+    max-height: 360px;
   }
 }
 
@@ -166,16 +190,6 @@ body {
   background: #900;
 }
 
-/* --- MEDIA QUERY GENERAL (CELULAR) --- */
-@media (max-width: 768px) {
-  .card-img-source {
-    max-height: 150px;
-  }
-  .theology-aside {
-    max-width: 100%;
-  }
-}
-
 /* --- CONTENEDORES DE IMÁGENES --- */
 .img-box {
   width: 100%;
@@ -192,7 +206,7 @@ body {
   display: block;
 }
 
-/* Contenedores de portadas de misterios */
+/* --- CONTENEDOR CONTROLADO DE PORTADAS --- */
 .misterio-img-box {
   height: 300px;
   overflow: hidden;
