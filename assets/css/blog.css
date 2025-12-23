@@ -64,21 +64,21 @@ body {
 .card-img-main.rey-img {
   width: 100%;
   height: auto;
-  max-height: 600px;    /* Escritorio */
+  max-height: 400px;    /* Escritorio */
   object-fit: cover;    /* Llena el contenedor sin deformar */
 }
 
 /* Ajuste tablet/móvil */
 @media (max-width: 768px) {
   .card-img-main.rey-img {
-    max-height: 480px;   /* Más alta en tablet/móvil */
+    max-height: 520px;   /* Más alta en tablet/móvil */
   }
 }
 
 /* Ajuste celular pequeño */
 @media (max-width: 480px) {
   .card-img-main.rey-img {
-    max-height: 420px;   /* Ajuste para celulares pequeños */
+    max-height: 550px;   /* Ajuste para celulares pequeños */
   }
 }
 
