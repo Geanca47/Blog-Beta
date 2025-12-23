@@ -50,6 +50,17 @@ body {
 }
 
 /* ✅ IMÁGENES PRINCIPALES (todas iguales, sin deformarse) */
+
+
+/* --- Imagen del Rey responsiva --- */
+.card-img-main.rey-img {
+  width: 100%;
+  height: auto;            /* Mantiene proporción */
+  max-height: 600px;       /* Escritorio */
+  object-fit: cover;       /* Llena el contenedor sin deformar */
+}
+
+
 .card-img-main {
   width: 100%;
   height: auto;          /* ✅ Mantiene proporción natural */
@@ -147,6 +158,22 @@ body {
 
 
 /* --- MEDIA QUERY (CELULAR) --- */
+
+
+/* Ajustes móviles */
+@media (max-width: 768px) {
+  .card-img-main.rey-img {
+    max-height: 480px;     /* Más alta en tablet/móvil */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-img-main.rey-img {
+    max-height: 420px;     /* Ajuste para celulares pequeños */
+  }
+}
+
+
 @media (max-width: 768px) {
 
   .card-img-main {
