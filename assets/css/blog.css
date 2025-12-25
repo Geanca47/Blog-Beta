@@ -74,7 +74,7 @@ body {
 .card-img-main.rey-img {
   width: 100%;
   height: auto;         /* Mantiene proporción real */
-  max-height: 800px !important; /* Evita que el límite anterior la achique */
+  max-height: 850px !important; /* Evita que el límite anterior la achique */
   object-fit: contain;  /* ¡CAMBIO CLAVE! Evita que se corte la imagen */
   object-position: center;
   padding: 0;           /* Eliminamos el padding para máximo detalle */
@@ -103,7 +103,7 @@ body {
 /* --- Celular --- */
 @media (max-width: 480px) {
   .rey-img-box {
-    max-height: 800px !important; /* Le damos permiso de ser alta */
+    max-height: 850px !important; /* Le damos permiso de ser alta */
   }
 }
 
