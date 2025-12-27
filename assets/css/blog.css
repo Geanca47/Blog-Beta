@@ -269,3 +269,15 @@ body {
   width: 100%;
   height: 100%;
 }
+
+/* ================================
+   BOTONES TRILOGÍA – AJUSTE SOLO EN CELULAR
+   ================================ */
+
+@media (max-width: 480px) {
+  .trilogia-superior .btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 18px;
+  }
+}
