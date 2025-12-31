@@ -29,7 +29,7 @@ body {
 .nav-link:hover { color: #ffcccc !important; }
 
 .tesseract-navbar {
-  width: 32px;
+  width: 36px;
   vertical-align: middle;
   margin-right: 6px;
   opacity: 0.85;
